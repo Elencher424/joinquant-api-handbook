@@ -1,0 +1,5585 @@
+{
+  "title": "聚宽 API 接口大全",
+  "generated_at": "2026-09-23T07:19:56.211005+00:00",
+  "official_entry_url": "https://www.joinquant.com/help/api/help#name:api",
+  "pages": [
+    {
+      "name": "api",
+      "url": "https://www.joinquant.com/help/api/help?name=api",
+      "sections": [
+        "API文档",
+        "开始写策略",
+        "简单但是完整的策略",
+        "实用的策略",
+        "策略引擎介绍",
+        "安全",
+        "数据",
+        "运行频率",
+        "运行时间",
+        "订单处理",
+        "撮合流程",
+        "下单时的撮合逻辑",
+        "未启用盘口撮合时",
+        "启用盘口撮合时",
+        "挂单时的撮合逻辑",
+        "按分钟Bar撮合",
+        "按tick撮合",
+        "非交易时段下单的特别说明",
+        "拆分合并与分红",
+        "股息红利税的计算",
+        "滑点",
+        "交易税费",
+        "风险指标",
+        "回测环境",
+        "回测过程",
+        "模拟盘注意事项",
+        "模拟交易和回测的差别",
+        "期货交割日",
+        "还券细则",
+        "投资组合优化器",
+        "示例",
+        "策略程序架构♠",
+        "策略API介绍",
+        "注意事项",
+        "策略设置函数",
+        "数据获取函数",
+        "jqlib",
+        "数据处理函数",
+        "组合优化函数",
+        "相关参数",
+        "交易函数",
+        "对象♠",
+        "其他函数",
+        "策略组合操作",
+        "Tick 级策略专用函数",
+        "Tick级专用API",
+        "Tick级示例策略",
+        "融资融券专用函数",
+        "初始化融资融券账户",
+        "融资融券专用API",
+        "期货策略专用函数",
+        "初始化期货账户",
+        "期货信息",
+        "期货专用API",
+        "归因分析说明",
+        "净值分析",
+        "收益分析",
+        "风险指标",
+        "持仓分析",
+        "Brinson 归因",
+        "因子分析",
+        "风格分析",
+        "风险分析",
+        "策略示例",
+        "均线策略",
+        "多股票持仓示例",
+        "多股票追涨策略",
+        "万圣节效应策略"
+      ],
+      "entry_count": 150
+    },
+    {
+      "name": "Stock",
+      "url": "https://www.joinquant.com/help/api/help?name=Stock",
+      "sections": [
+        "获取股票数据",
+        "获取股票概况",
+        "获取单支股票数据",
+        "获取所有股票数据",
+        "判断股票是否是ST",
+        "获取股票的融资融券信息",
+        "股票分类信息",
+        "获取指数成份股",
+        "获取行业、概念成份股",
+        "查询股票所属行业",
+        "获取行情数据",
+        "获取融资融券标的列表",
+        "获取融资标的列表",
+        "获取融券标的列表",
+        "获取融资融券汇总数据",
+        "获取股票资金流向数据",
+        "获取龙虎榜数据",
+        "上市公司分红送股（除权除息）数据",
+        "沪深市场每日成交概况",
+        "市场通（沪港通，深港通和港股通）",
+        "合格证券变动记录",
+        "市场通交易日历",
+        "市场通十大成交活跃股",
+        "市场通成交与额度信息",
+        "市场通汇率",
+        "沪深港通持股数据",
+        "上市公司概况",
+        "上市公司基本信息",
+        "上市公司状态变动",
+        "股票上市信息",
+        "股票简称变更情况",
+        "上市公司员工情况",
+        "上市公司股东和股本信息",
+        "十大股东",
+        "十大流通股东",
+        "股东股份质押",
+        "股东股份冻结",
+        "股东户数",
+        "大股东增减持",
+        "受限股份上市公告日期",
+        "受限股份实际解禁日期",
+        "上市公司股本变动",
+        "获取单季度/年度财务数据",
+        "财务数据列表",
+        "市值数据",
+        "资产负债数据",
+        "现金流数据",
+        "利润数据",
+        "财务指标数据",
+        "获取报告期财务数据",
+        "审计意见(新上线数据)",
+        "定期报告预约披露时间表(新上线数据)",
+        "业绩预告",
+        "业绩快报(新上线数据)",
+        "合并利润表",
+        "母公司利润表",
+        "上市公司母公司利润表",
+        "合并现金流量表",
+        "母公司现金流量表",
+        "合并资产负债表",
+        "母公司资产负债表",
+        "金融类合并利润表",
+        "金融类合并利润表2007版",
+        "金融类母公司利润表",
+        "金融类合并现金流量表",
+        "金融类合并现金流量表2007版",
+        "金融类母公司现金流量表",
+        "金融类合并资产负债表",
+        "金融类母公司资产负债表"
+      ],
+      "entry_count": 4
+    },
+    {
+      "name": "Future",
+      "url": "https://www.joinquant.com/help/api/help?name=Future",
+      "sections": [
+        "获取期货数据",
+        "获取期货概况",
+        "获取单只期货信息",
+        "获取所有期货信息",
+        "期货结算价与持仓量",
+        "获取期货行情数据",
+        "获取期货行情数据",
+        "获取期货bar数据",
+        "获取期货tick数据",
+        "获取期货交易统计数据",
+        "获取期货龙虎榜数据",
+        "获取期货仓单数据",
+        "期货手续费及保证金",
+        "获取期货手续费",
+        "获取期货保证金",
+        "期货列表",
+        "金融期货列表",
+        "支持的金融期货种类",
+        "1. 沪深300指数期货合约表",
+        "2. 上证50股指期货合约表",
+        "3. 中证500股指期货合约表",
+        "4. 中证1000股指期货合约表",
+        "5. 2年期国债期货合约表",
+        "6. 5年期国债期货合约表",
+        "7. 10年期国债期货合约表",
+        "8. 30年国指期货合约表",
+        "商品期货列表",
+        "主力连续合约及品种指数",
+        "中金所",
+        "广期所",
+        "大商所",
+        "上海国际能源交易中心",
+        "上期所",
+        "郑商所"
+      ],
+      "entry_count": 0
+    },
+    {
+      "name": "fund",
+      "url": "https://www.joinquant.com/help/api/help?name=fund",
+      "sections": [
+        "获取基金数据",
+        "基金概况：上市退市时间、代码、名称、累计/单位净值等",
+        "获取单支基金数据",
+        "获取所有基金数据",
+        "场内基金份额数据",
+        "获取场内基金tick数据",
+        "获取etf跟踪指数信息",
+        "基金列表",
+        "LOF列表"
+      ],
+      "entry_count": 0
+    },
+    {
+      "name": "index",
+      "url": "https://www.joinquant.com/help/api/help?name=index",
+      "sections": [
+        "获取沪深指数数据",
+        "指数概况",
+        "获取单支指数数据",
+        "获取所有指数数据",
+        "获取指数成份股",
+        "获取指数成份股权重",
+        "行情数据",
+        "历史行情数据",
+        "当前单位时间的行情数据(策略专用)",
+        "获取指数tick数据",
+        "沪深指数列表"
+      ],
+      "entry_count": 0
+    },
+    {
+      "name": "JQData",
+      "url": "https://www.joinquant.com/help/api/help?name=JQData",
+      "sections": [
+        "JQData-本地量化数据说明书",
+        "由于内容较多，可使用Ctrl+F搜索您需要的数据。",
+        "介绍与说明",
+        "试用和购买",
+        "JQData 安装、登陆及流量查询",
+        "JQData用户协议",
+        "JQData常见报错及数据处理规则",
+        "JQData常见报错",
+        "数据处理规则",
+        "通用接口",
+        "JQData证券代码格式",
+        "获取标的概况",
+        "获取交易日历",
+        "通用行情接口",
+        "判断是否ST/基金净值/期货结算价",
+        "run_query 查询数据库中的数据",
+        "股票",
+        "股票概况",
+        "股票行情数据",
+        "股票融资融券数据",
+        "股票：指数成分股及权重数据",
+        "股票交易统计数据",
+        "市场通数据（含南北向资金数据）",
+        "行业分类与概念分类",
+        "行业概念分类",
+        "申万行业指数数据",
+        "财务数据",
+        "单季度/年度财务数据",
+        "查询方法（含新接口）",
+        "财务及估值数据",
+        "专项指标（银行业/券商/保险）",
+        "报告期财务数据",
+        "通用财务报表",
+        "金融类财务报表",
+        "业绩预告",
+        "上市公司基础信息",
+        "上市公司相关信息",
+        "上市公司概况",
+        "上市公司股东和股本信息",
+        "期货",
+        "期货概况（含新接口）",
+        "期货行情数据",
+        "期货交易统计数据",
+        "基金",
+        "基金概况",
+        "场内基金行情数据",
+        "基金融资融券",
+        "公募基金数据(净值等)",
+        "指数",
+        "指数概况",
+        "指数行情数据",
+        "指数成分股及权重数据",
+        "期权",
+        "期权概况",
+        "期权行情数据",
+        "期权交易统计数据",
+        "期权列表",
+        "债券",
+        "债券概况",
+        "国债逆回购日行情",
+        "可转债概况",
+        "可转债统计数据",
+        "可转债行情数据",
+        "宏观数据",
+        "新闻联播文本",
+        "tick数据(机构)",
+        "因子数据（含新接口）",
+        "聚宽因子库",
+        "ALPHA特色因子",
+        "技术分析指标",
+        "因子看板及风格因子等（新）",
+        "因子看板数据",
+        "风格因子归因",
+        "活动专区"
+      ],
+      "entry_count": 208
+    },
+    {
+      "name": "optimizer",
+      "url": "https://www.joinquant.com/help/api/help?name=optimizer",
+      "sections": [
+        "投资组合优化",
+        "概述",
+        "示例",
+        "portfolio_optimizer - 投资组合优化",
+        "概述",
+        "示例",
+        "优化",
+        "相关参数"
+      ],
+      "entry_count": 4
+    },
+    {
+      "name": "faq",
+      "url": "https://www.joinquant.com/help/api/help?name=faq",
+      "sections": [
+        "常见问题",
+        "关于JoinQuant",
+        "数据",
+        "JoinQuant提供哪些数据及数据更新频率",
+        "JoinQuant提供的数据支持下载吗？",
+        "数据后缀是怎么定义的？",
+        "发现数据有问题怎么办？",
+        "不同平台的行情数据或者财务数据不同",
+        "JQData，jqdatasdk和jqdata的关系",
+        "如何获取行业及概念板块的行情数据及pe,pb等数据",
+        "有关期货主力合约或者指数与其他平台问题",
+        "为什么有时看到的期货主力合约和其他平台不一致，是怎么判断的，什么时候更新的",
+        "JQData使用过程过程有问题怎么处理？",
+        "回测",
+        "回测的作用？",
+        "回测可以使用哪些数据？",
+        "如何创建并运行策略？",
+        "如何编写一个最简单的策略？",
+        "编译运行和运行回测的区别？",
+        "回测时Cash（可用资金）为负是因为什么？",
+        "多次回测的结果不一样， 可能是什么原因？",
+        "参数优化及并行回测",
+        "参数优化及并行回测参考教程",
+        "区分create_backtest(策略ID)和get_backtest(回测ID)",
+        "回测运行比较慢",
+        "模拟交易",
+        "模拟交易运行时间",
+        "模拟交易使用什么数据？",
+        "如何进行模拟交易？",
+        "如果提示没有可用的模拟交易位，请点击 模拟交易列表 最下面的 获取新的模拟交易位 ，使用积分兑换模拟交易位；请注意模拟交易位是和频率有关的，需要选择对应运行频率的模拟交易位。",
+        "模拟交易支持哪些操作？",
+        "如何替换模拟交易的代码？",
+        "如何重新设置日志级别（替换代码）",
+        "如何开启微信通知？",
+        "数据有延迟？",
+        "日志提示：策略进程异常退出，可能是什么原因？",
+        "模拟交易或者回测怎么读取本地文件或者保存文件到研究",
+        "模拟交易没有运行？",
+        "模拟交易界面上参数说明",
+        "模拟交易运行时间",
+        "延时运行",
+        "投资研究",
+        "研究的说明",
+        "研究的作用",
+        "研究内核的选择",
+        "研究内存、磁盘等不够用怎么办？",
+        "上传文件和下载文件是否有限制？",
+        "研究和回测中都支持哪些第三方Python库",
+        "投资研究使用教程",
+        "回测及模拟交易和研究的数据如何交互",
+        "投资研究打不开的解决方法",
+        "查看研究文件大小及数量",
+        "其他第三方库问题",
+        "研究和回测中都支持哪些第三方Python库",
+        "Pandas常见问题",
+        "Pandas: 如何增加 DataFrame 显示的行、列数？",
+        "Pandas: object has no attribute sort_values",
+        "numpy.float64 浮点数的展示问题",
+        "忽略或屏蔽提示及警告",
+        "matplotlib中文显示",
+        "mpl_finance",
+        "已知的第三方库中的bug",
+        "研究中安装第三方库",
+        "聚宽VIP说明",
+        "客户服务",
+        "平台资源",
+        "积分优惠",
+        "高级功能",
+        "更多专属功能即将上线",
+        "VIP会员更多问题",
+        "实盘说明"
+      ],
+      "entry_count": 0
+    },
+    {
+      "name": "plateData",
+      "url": "https://www.joinquant.com/help/api/help?name=plateData",
+      "sections": [
+        "行业概念数据",
+        "行业类",
+        "证监会行业",
+        "聚宽行业",
+        "聚宽一级行业",
+        "聚宽二级行业",
+        "申万行业",
+        "申万一级行业",
+        "申万二级行业",
+        "申万三级行业",
+        "概念类",
+        "概念板块"
+      ],
+      "entry_count": 0
+    },
+    {
+      "name": "Option",
+      "url": "https://www.joinquant.com/help/api/help?name=Option",
+      "sections": [
+        "获取期权数据",
+        "获取期权合约资料",
+        "获取期权合约调整记录",
+        "获取期权每日盘前静态文件",
+        "获取期权日行情数据",
+        "获取期权分钟行情(仅本地数据提供)",
+        "获取指定时间周期的期权行情(仅本地数据提供)",
+        "获取期权的tick行情(仅本地数据提供)",
+        "获取ETF期权交易和持仓排名统计",
+        "获取期权风险指标数据",
+        "获取期权行权交收信息",
+        "期权列表"
+      ],
+      "entry_count": 0
+    }
+  ],
+  "entries": [
+    {
+      "page": "api",
+      "name": "Total Returns",
+      "purpose": "策略收益",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "topic"
+    },
+    {
+      "page": "api",
+      "name": "Total Annualized Returns",
+      "purpose": "策略年化收益",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "topic"
+    },
+    {
+      "page": "api",
+      "name": "Alpha",
+      "purpose": "阿尔法",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "topic"
+    },
+    {
+      "page": "api",
+      "name": "Beta",
+      "purpose": "贝塔",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "topic"
+    },
+    {
+      "page": "api",
+      "name": "Sharpe",
+      "purpose": "夏普比率",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "topic"
+    },
+    {
+      "page": "api",
+      "name": "Sortino",
+      "purpose": "索提诺比率",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "topic"
+    },
+    {
+      "page": "api",
+      "name": "Information Ratio",
+      "purpose": "信息比率",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "topic"
+    },
+    {
+      "page": "api",
+      "name": "Algorithm Volatility",
+      "purpose": "策略波动率",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "topic"
+    },
+    {
+      "page": "api",
+      "name": "Benchmark Volatility",
+      "purpose": "基准波动率",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "topic"
+    },
+    {
+      "page": "api",
+      "name": "Max Drawdown",
+      "purpose": "最大回撤",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "topic"
+    },
+    {
+      "page": "api",
+      "name": "Downside Risk",
+      "purpose": "下行波动率",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "topic"
+    },
+    {
+      "page": "api",
+      "name": "胜率",
+      "purpose": "胜率(%)",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "topic"
+    },
+    {
+      "page": "api",
+      "name": "日胜率",
+      "purpose": "日胜率(%)",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "topic"
+    },
+    {
+      "page": "api",
+      "name": "盈亏比",
+      "purpose": "盈亏比",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "topic"
+    },
+    {
+      "page": "api",
+      "name": "AEI",
+      "purpose": "日均超额收益",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "topic"
+    },
+    {
+      "page": "api",
+      "name": "超额收益最大回撤",
+      "purpose": "超额收益最大回撤",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "topic"
+    },
+    {
+      "page": "api",
+      "name": "超额收益夏普比率",
+      "purpose": "超额收益夏普比率",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "topic"
+    },
+    {
+      "page": "api",
+      "name": "超额收益",
+      "purpose": "除法版超额收益率说明",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "topic"
+    },
+    {
+      "page": "api",
+      "name": "对数轴",
+      "purpose": "对数轴说明",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "topic"
+    },
+    {
+      "page": "api",
+      "name": "对数轴上的超额收益",
+      "purpose": "对数轴上的超额收益的计算方法",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "topic"
+    },
+    {
+      "page": "api",
+      "name": "initialize",
+      "purpose": "初始化函数",
+      "signature": "initialize(context)",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "run_daily/run_weekly/run_monthly",
+      "purpose": "定时运行策略(可选)",
+      "signature": "run_daily(func, time='9:30', reference_security)",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "handle_data",
+      "purpose": "运行策略(可选)",
+      "signature": "handle_data(context, data)",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "on_event",
+      "purpose": "事件回调(可选)",
+      "signature": "on_event(context, event)",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "before_trading_start",
+      "purpose": "开盘前运行策略(可选)",
+      "signature": "before_trading_start(context)",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "after_trading_end",
+      "purpose": "收盘后运行策略(可选)",
+      "signature": "after_trading_end(context)",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "on_strategy_end",
+      "purpose": "策略运行结束时调用(可选)",
+      "signature": "on_strategy_end(context)",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "process_initialize",
+      "purpose": "每次程序启动时运行函数(可选)",
+      "signature": "process_initialize(context)",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "after_code_changed",
+      "purpose": "模拟交易更换代码后运行函数(可选)",
+      "signature": "after_code_changed(context)",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "unschedule_all",
+      "purpose": "取消所有定时运行(可选)",
+      "signature": "unschedule_all()",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "set_benchmark",
+      "purpose": "设置基准",
+      "signature": "set_benchmark(security)",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "set_order_cost",
+      "purpose": "设置佣金/印花税",
+      "signature": "set_order_cost(cost, type, ref=None)",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "set_slippage",
+      "purpose": "设置滑点",
+      "signature": "set_slippage(object,type=None, ref=None)",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "use_real_price",
+      "purpose": "设置动态复权(真实价格)模式，建议开启",
+      "signature": "set_option('use_real_price', value)",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "order_volume_ratio",
+      "purpose": "设置成交量比例",
+      "signature": "set_option('order_volume_ratio', value)",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "match_with_order_book",
+      "purpose": "设置是否开启盘口撮合模式",
+      "signature": "set_option('match_with_order_book', value)",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "set_universe(history专用)",
+      "purpose": "设定股票池",
+      "signature": "set_universe(security_list)",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "set_commission(已废弃)",
+      "purpose": "设定费率",
+      "signature": "set_commission(object)",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "disable_cache",
+      "purpose": "关闭缓存",
+      "signature": "disable_cache()",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "实验性设置项",
+      "purpose": "实验性设置项",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "topic"
+    },
+    {
+      "page": "api",
+      "name": "avoid_future_data",
+      "purpose": "设置是否开启避免未来数据模式",
+      "signature": "set_option(\"avoid_future_data\", True)",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "get_price",
+      "purpose": "获取历史数据，可查询多个标的多个数据字段，返回数据格式为 DataFrame",
+      "signature": "get_price(security, start_date=None, end_date=None, frequency='daily', fields=None, skip_paused=False, fq='pre', count=None, panel=True, fill_paused=True)",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "history",
+      "purpose": "获取历史数据，可查询多个标的单个数据字段，返回数据格式为 DataFrame 或 Dict(字典)",
+      "signature": "history(count, unit='1d', field='avg', security_list=None, df=True, skip_paused=False, fq='pre')",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "attribute_history",
+      "purpose": "获取历史数据，可查询单个标的多个数据字段，返回数据格式为 DataFrame 或 Dict(字典)",
+      "signature": "attribute_history(security, count, unit='1d', fields=['open', 'close', 'high', 'low', 'volume', 'money'], skip_paused=True, df=True, fq='pre')",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "get_bars",
+      "purpose": "获取历史数据(包含快照数据)，可查询单个或多个标的多个数据字段，返回数据格式为 numpy.ndarray或DataFrame",
+      "signature": "get_bars(security, count, unit='1d',fields=['date', 'open','high','low','close'], include_now=False, end_dt=None, fq_ref_date=None, df=False)",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "get_current_tick♠",
+      "purpose": "获取最新的 tick 数据",
+      "signature": "get_current_tick(security, dt=None, df=False)",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "get_ticks",
+      "purpose": "获取股票、期货、50ETF期权、股票指数及场内基金的 tick 数据",
+      "signature": "get_ticks(security, end_dt, start_dt=None, count=None, fields=['time', 'current', 'high', 'low', 'volume', 'money'], skip=True, df=False)",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "get_current_data ♠",
+      "purpose": "获取当前时间数据",
+      "signature": "get_current_data()",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "get_extras",
+      "purpose": "获取期货结算价,股票ST状态等",
+      "signature": "get_extras(info, security_list, start_date='2015-01-01', end_date='2015-12-31', df=True, count=None)",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "get_all_factors",
+      "purpose": "获取聚宽因子库中所有因子的信息",
+      "signature": "get_all_factors()",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "get_factor_values",
+      "purpose": "质量、基础、情绪、成长、风险、每股等数百个因子数据",
+      "signature": "get_factor_values(securities, factors, start_date, end_date, count)",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "get_factor_kanban_values",
+      "purpose": "获取因子看板列表数据",
+      "signature": "get_factor_kanban_values(universe='hs300',bt_cycle='month_3',model='long_only',category=['quality','basics','emotion','growth','risk','pershare'],skip_paused=False,commision_slippage=0)",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "get_fundamentals",
+      "purpose": "查询财务数据",
+      "signature": "get_fundamentals(query_object, date=None, statDate=None)",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "get_fundamentals_continuously",
+      "purpose": "查询多日的财务数据",
+      "signature": "get_fundamentals_continuously(query_object, end_date=None,count=None, panel=True)",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "finance.run_query",
+      "purpose": "深沪港通股东信息等数据",
+      "signature": "finance.run_query(query_object)",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "macro.run_query",
+      "purpose": "获取聚宽宏观经济数据",
+      "signature": "macro.run_query(query_object)",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "get_billboard_list",
+      "purpose": "获取龙虎榜数据",
+      "signature": "get_billboard_list(stock_list, start_date, end_date, count)",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "get_index_stocks",
+      "purpose": "获取指数成份股",
+      "signature": "get_index_stocks(index_symbol, date=None)",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "get_index_weights",
+      "purpose": "获取指数成分股权重",
+      "signature": "get_index_weights(index_id, date=None)",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "get_industry_stocks",
+      "purpose": "获取行业成份股",
+      "signature": "get_industry_stocks(industry_code, date=None)",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "get_concept_stocks",
+      "purpose": "获取概念成份股",
+      "signature": "get_concept_stocks(concept_code, date=None)",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "get_industries",
+      "purpose": "获取行业列表",
+      "signature": "get_industries(name, date=None)",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "get_concepts",
+      "purpose": "获取概念列表",
+      "signature": "get_concepts()",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "get_all_securities",
+      "purpose": "获取所有标的信息",
+      "signature": "get_all_securities(types=[], date=None)",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "get_security_info",
+      "purpose": "获取单个标的信息",
+      "signature": "get_security_info(code, date=None)",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "get_industry",
+      "purpose": "查询股票所属行业",
+      "signature": "get_industry(security, date=None)",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "get_all_trade_days",
+      "purpose": "获取所有交易日",
+      "signature": "get_all_trade_days()",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "get_trade_days",
+      "purpose": "获取指定范围交易日",
+      "signature": "get_trade_days(start_date=None, end_date=None, count=None)",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "get_money_flow",
+      "purpose": "获取资金流信息",
+      "signature": "get_money_flow(security_list, start_date=None, end_date=None, fields=None, count=None)",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "get_concept",
+      "purpose": "获取股票所属概念板块",
+      "signature": "get_concept(security, date=None)",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "get_call_auction",
+      "purpose": "获取指定时间区间内集合竞价时的 tick 数据",
+      "signature": "get_call_auction(security, start_date=None, end_date=None, fields=None)",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "get_trade_day",
+      "purpose": "根据标的获取指定时刻标的对应的交易日",
+      "signature": "get_trade_day(security, query_dt)",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "get_history_fundamentals",
+      "purpose": "获取多个季度/年度的历史财务数据",
+      "signature": "get_history_fundamentals(security, fields, watch_date=None, stat_date=None, count=1, interval='1q', stat_by_year=False)",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "get_valuation",
+      "purpose": "获取多个标的在指定交易日范围内的市值表数据",
+      "signature": "get_valuation(security, start_date=None, end_date=None, fields=None, count=None)",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "alpha101",
+      "purpose": "Alpha 101 因子",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "topic"
+    },
+    {
+      "page": "api",
+      "name": "alpha191",
+      "purpose": "Alpha 191 因子",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "topic"
+    },
+    {
+      "page": "api",
+      "name": "technical_analysis",
+      "purpose": "技术分析指标",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "topic"
+    },
+    {
+      "page": "api",
+      "name": "neutralize",
+      "purpose": "中性化",
+      "signature": "neutralize(series, how=None, date=None, axis=1, fillna=None, add_constant=False)",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "winsorize",
+      "purpose": "去极值",
+      "signature": "winsorize(series, scale=None, range=None, qrange=None, inclusive=True, inf2nan=True, axis=1)",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "winsorize_med",
+      "purpose": "中位数去极值",
+      "signature": "winsorize_med(series, scale=1, inclusive=True, inf2nan=True, axis=1)",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "standardlize",
+      "purpose": "标准化(z-score)",
+      "signature": "standardlize(series, inf2nan=True, axis=1)",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "目标函数(target)",
+      "purpose": "优化目标函数，只能选择一个",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "topic"
+    },
+    {
+      "page": "api",
+      "name": "限制函数(constraints)",
+      "purpose": "用以对组合总权重进行限制，可设置一个或多个相同/不同类别的函数",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "topic"
+    },
+    {
+      "page": "api",
+      "name": "边界函数(bounds)",
+      "purpose": "用以对组合中单标的权重进行限制，可设置一个或多个相同/不同类别的函数",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "topic"
+    },
+    {
+      "page": "api",
+      "name": "示例代码",
+      "purpose": "给了五个应用示例，修改参数即可生效",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "topic"
+    },
+    {
+      "page": "api",
+      "name": "order",
+      "purpose": "按股数下单",
+      "signature": "order(security, amount, style=None, side='long', pindex=0, close_today=False)",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "order_target",
+      "purpose": "目标股数下单",
+      "signature": "order_target(security, amount, style=None, side='long', pindex=0, close_today=False)",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "order_value",
+      "purpose": "按价值下单",
+      "signature": "order_value(security, value, style=None, side='long', pindex=0, close_today=False)",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "order_target_value",
+      "purpose": "目标价值下单",
+      "signature": "order_target_value(security, value, style=None, side='long', pindex=0, close_today=False)",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "cancel_order",
+      "purpose": "撤单",
+      "signature": "cancel_order(order)",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "get_open_orders",
+      "purpose": "获取未完成订单",
+      "signature": "get_open_orders()",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "get_orders",
+      "purpose": "获取订单信息",
+      "signature": "get_orders(order_id=None, security=None, status=None)",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "get_trades",
+      "purpose": "获取成交信息",
+      "signature": "get_trades()",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "inout_cash",
+      "purpose": "账户出入金",
+      "signature": "inout_cash(cash, pindex=0)",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "batch_submit_orders",
+      "purpose": "篮子下单",
+      "signature": "batch_submit_orders(orders)",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "batch_cancel_orders",
+      "purpose": "篮子撤单",
+      "signature": "batch_cancel_orders(orders)",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "g",
+      "purpose": "全局变量对象",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "topic"
+    },
+    {
+      "page": "api",
+      "name": "Context",
+      "purpose": "策略信息总览，包含账户、时间等信息",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "topic"
+    },
+    {
+      "page": "api",
+      "name": "SubPortfolio",
+      "purpose": "子账户信息",
+      "signature": "print(\"累计出入金:{0}\".format(context.subportfolios[0].inout_cash))",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "Portfolio",
+      "purpose": "总账户信息",
+      "signature": "print(\"多单的仓位:{0}\".format(context.portfolio.long_positions))",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "Position",
+      "purpose": "持仓标的信息",
+      "signature": "print(type(context.portfolio.long_positions))",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "SecurityUnitData",
+      "purpose": "data对象",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "topic"
+    },
+    {
+      "page": "api",
+      "name": "tick 对象",
+      "purpose": "tick 对象",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "topic"
+    },
+    {
+      "page": "api",
+      "name": "Trade对象",
+      "purpose": "订单的一次交易记录,一个订单可能分多次交易.",
+      "signature": "get_trades()",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "Order对象",
+      "purpose": "买卖订单信息",
+      "signature": "order('000001.XSHE', 100)",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "OrderStatus",
+      "purpose": "订单状态",
+      "signature": "OrderStatus(Enum)",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "OrderStyle",
+      "purpose": "下单方式",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "topic"
+    },
+    {
+      "page": "api",
+      "name": "Event",
+      "purpose": "事件对象",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "topic"
+    },
+    {
+      "page": "api",
+      "name": "record ♠",
+      "purpose": "画图函数",
+      "signature": "record(**kwargs)",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "send_message ♠",
+      "purpose": "发送自定义消息",
+      "signature": "send_message(message, channel='weixin')",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "log",
+      "purpose": "日志log信息",
+      "signature": "log.error(content)",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "write_file",
+      "purpose": "将回测或模拟交易数据写入到投资研究文件中",
+      "signature": "write_file(path, content, append=False)",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "read_file",
+      "purpose": "在回测或者模拟交易中读取您研究中文件",
+      "signature": "read_file(path)",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "自定义python库",
+      "purpose": "自定义私人的Python库文件",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "topic"
+    },
+    {
+      "page": "api",
+      "name": "create_backtest",
+      "purpose": "通过一个策略ID从研究中创建回测",
+      "signature": "create_backtest(algorithm_id, start_date, end_date, frequency=\"day\", initial_cash=10000, initial_positions=None, extras=None, name=None, code=\"\", benchmark=None, python_version=2, use_credit=False)",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "get_backtest",
+      "purpose": "研究中获取回测与模拟交易信息",
+      "signature": "get_backtest(backtest_id)",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "normalize_code",
+      "purpose": "股票代码格式转换",
+      "signature": "normalize_code()",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "enable_profile ♠",
+      "purpose": "性能分析",
+      "signature": "enable_profile()",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "set_subportfolios",
+      "purpose": "初始化策略子账户 subportfolios",
+      "signature": "set_subportfolios([SubPortfolioConfig(cash,type), ... ])",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "SubPortfolio",
+      "purpose": "子账户信息",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "topic"
+    },
+    {
+      "page": "api",
+      "name": "transfer_cash",
+      "purpose": "账户间转移资金",
+      "signature": "transfer_cash(from_pindex, to_pindex, cash)",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "handle_tick",
+      "purpose": "策略运行",
+      "signature": "handle_tick(context, tick)",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "subscribe",
+      "purpose": "订阅标的的 tick 事件",
+      "signature": "subscribe(security, frequency)",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "unsubscribe",
+      "purpose": "取消订阅标的的 tick 事件",
+      "signature": "unsubscribe(security, frequency)",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "unsubscribe_all",
+      "purpose": "取消订阅所有 tick 事件",
+      "signature": "unsubscribe_all()",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "margincash_interest_rate",
+      "purpose": "设置融资利率",
+      "signature": "set_option('margincash_interest_rate', value)",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "margincash_margin_rate",
+      "purpose": "设置融资保证金比率",
+      "signature": "set_option('margincash_margin_rate', value)",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "marginsec_interest_rate",
+      "purpose": "设置融券利率",
+      "signature": "set_option('marginsec_interest_rate', value)",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "marginsec_margin_rate",
+      "purpose": "设置融券保证金比率",
+      "signature": "set_option('marginsec_margin_rate', value)",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "margincash_open",
+      "purpose": "融资买入",
+      "signature": "margincash_open(security, amount, style=None, pindex=0)",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "margincash_close",
+      "purpose": "卖券还款",
+      "signature": "margincash_close(security, amount, style=None, pindex=0)",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "margincash_direct_refund",
+      "purpose": "直接还款",
+      "signature": "margincash_direct_refund(value, pindex=0)",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "marginsec_open",
+      "purpose": "融券卖出",
+      "signature": "marginsec_open(security, amount, style=None, pindex=0)",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "marginsec_close",
+      "purpose": "买券还券",
+      "signature": "marginsec_close(security, amount, style=None, pindex=0)",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "marginsec_direct_refund",
+      "purpose": "直接还券",
+      "signature": "marginsec_direct_refund(security, amount, pindex=0)",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "get_margincash_stocks",
+      "purpose": "获取融资标的列表",
+      "signature": "get_margincash_stocks()",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "get_marginsec_stocks",
+      "purpose": "获取融券标的列表",
+      "signature": "get_marginsec_stocks(date=None)",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "get_mtss",
+      "purpose": "获取融资融券信息",
+      "signature": "get_mtss(security_list, start_date=None, end_date=None, fields=None, count=None)",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "主力连续合约",
+      "purpose": "主力连续合约信息",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "topic"
+    },
+    {
+      "page": "api",
+      "name": "品种指数",
+      "purpose": "品种指数信息",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "topic"
+    },
+    {
+      "page": "api",
+      "name": "期货注意事项",
+      "purpose": "期货策略注意事项",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "topic"
+    },
+    {
+      "page": "api",
+      "name": "get_dominant_future",
+      "purpose": "获取主力合约对应的标的",
+      "signature": "get_dominant_future(underlying_symbol, date=None)",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "get_future_contracts",
+      "purpose": "期货可交易合约列表",
+      "signature": "get_future_contracts(security, date=None)",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "futures_margin_rate",
+      "purpose": "设置期货保证金比例",
+      "signature": "set_option('futures_margin_rate', value)",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "is_dangerous",
+      "purpose": "期货保证金预警",
+      "signature": "is_dangerous(margin_rate)",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "get_price等",
+      "purpose": "获取期货的行情数据",
+      "signature": "get_price('C1909.XDCE', end_date='2019-06-28 15:00:00', count=5, fields=['close', 'open_interest'], frequency='1m')",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "order",
+      "purpose": "期货按手数下单",
+      "signature": "order(security, amount, style=None, side='long', pindex=0, close_today=False)",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "order_target",
+      "purpose": "期货目标手数下单",
+      "signature": "order_target(security, amount, style=None, side='long', pindex=0, close_today=False)",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "order_value",
+      "purpose": "期货按保证金下单",
+      "signature": "order_value(security, value, style=None, side='long', pindex=0, close_today=False)",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "api",
+      "name": "order_target_value",
+      "purpose": "期货目标保证金下单",
+      "signature": "order_target_value(security, value, style=None, side='long', pindex=0, close_today=False)",
+      "source": "https://www.joinquant.com/help/api/help?name=api",
+      "kind": "function"
+    },
+    {
+      "page": "Stock",
+      "name": "get_fundamentals",
+      "purpose": "查询财务数据",
+      "signature": "get_fundamentals(query_object, date=None, statDate=None)",
+      "source": "https://www.joinquant.com/help/api/help?name=Stock",
+      "kind": "function"
+    },
+    {
+      "page": "Stock",
+      "name": "get_fundamentals_continuously",
+      "purpose": "查询多日的财务数据",
+      "signature": "get_fundamentals_continuously(query_object, end_date=None,count=None, panel=True)",
+      "source": "https://www.joinquant.com/help/api/help?name=Stock",
+      "kind": "function"
+    },
+    {
+      "page": "Stock",
+      "name": "get_history_fundamentals",
+      "purpose": "获取多个季度/年度的历史财务数据",
+      "signature": "get_history_fundamentals(security, fields, watch_date=None, stat_date=None, count=1, interval='1q', stat_by_year=False)",
+      "source": "https://www.joinquant.com/help/api/help?name=Stock",
+      "kind": "function"
+    },
+    {
+      "page": "Stock",
+      "name": "get_valuation",
+      "purpose": "获取多个标的在指定交易日范围内的市值表数据",
+      "signature": "get_valuation(security, start_date=None, end_date=None, fields=None, count=None)",
+      "source": "https://www.joinquant.com/help/api/help?name=Stock",
+      "kind": "function"
+    },
+    {
+      "page": "JQData",
+      "name": "JQData介绍",
+      "purpose": "JQData是什么",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "JQData提供的数据及数据更新频率",
+      "purpose": "JQData提供的数据及数据更新频率",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "为什么选择JQData",
+      "purpose": "JQData的优势",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "商务合作",
+      "purpose": "微信：JQData02/ 邮件：jqdatasdk@joinquant.com",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "版本信息",
+      "purpose": "版本信息",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "关于JQData、jqdatasdk 和 jqdata",
+      "purpose": "三者的区别",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "如何开通JQData",
+      "purpose": "申请试用",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "如何购买JQData",
+      "purpose": "开通正式账号",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "如何安装使用JQData",
+      "purpose": "安装/升级/使用jqdatasdk包",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "登录JQData",
+      "purpose": "登录JQData",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "get_query_count",
+      "purpose": "查询当日剩余可调用条数",
+      "signature": "get_query_count()",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "function"
+    },
+    {
+      "page": "JQData",
+      "name": "JQData用户协议",
+      "purpose": "JQData用户协议",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "账号最多开启1个链接",
+      "purpose": "账号最多开启1个链接",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "认证失败",
+      "purpose": "认证失败的原因",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "TTransportException",
+      "purpose": "常见报错解决方法",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "JQData和官网不一致API对比",
+      "purpose": "JQData和官网不一致API对比",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "有关Pandas版本的说明",
+      "purpose": "有关Pandas版本的说明",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "JQData教程",
+      "purpose": "干货教程",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "行情数据",
+      "purpose": "不同数据源的差异/价量、复权等处理规则",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "财务数据",
+      "purpose": "不同数据源的差异/修改的财务数据、分红送股等处理规则",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "指数/行业成分股",
+      "purpose": "指数的常见问题",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "其他数据问题",
+      "purpose": "融资融券、期货、因子等处理规则",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "证券代码标准格式的定义",
+      "purpose": "股票/期货/场外基金（场内基金同股票）",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "normalize_code",
+      "purpose": "将标的代码转化成聚宽标准格式(支持股票、期货、场内基金)",
+      "signature": "normalize_code(code)",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "function"
+    },
+    {
+      "page": "JQData",
+      "name": "get_security_info",
+      "purpose": "单个标的信息（股票/基金/指数的信息）",
+      "signature": "get_security_info(code)",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "function"
+    },
+    {
+      "page": "JQData",
+      "name": "get_all_securities",
+      "purpose": "所有标的信息(股票、基金、指数、期货等)",
+      "signature": "get_all_securities(types=[], date=None)",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "function"
+    },
+    {
+      "page": "JQData",
+      "name": "get_trade_days",
+      "purpose": "指定范围交易日",
+      "signature": "get_trade_days(start_date=None, end_date=None, count=None)",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "function"
+    },
+    {
+      "page": "JQData",
+      "name": "get_all_trade_days",
+      "purpose": "获取所有交易日",
+      "signature": "get_all_trade_days()",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "function"
+    },
+    {
+      "page": "JQData",
+      "name": "get_price",
+      "purpose": "1天/分钟行情数据",
+      "signature": "get_price(security, start_date=None, end_date=None, frequency='daily', fields=None, skip_paused=False, fq='pre', count=None)",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "function"
+    },
+    {
+      "page": "JQData",
+      "name": "get_bars",
+      "purpose": "指定时间周期的分钟/日行情数据（支持时间周期：'1m','5m', '15m', '30m', '60m', '120m', '1w', '1M'）",
+      "signature": "get_bars(security, count, unit='1d', fields=['date','open','high','low','close'], include_now=False, end_dt=None, fq_ref_date=None,df=True)",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "function"
+    },
+    {
+      "page": "JQData",
+      "name": "get_call_auction",
+      "purpose": "获取集合竞价数据",
+      "signature": "get_call_auction(security, start_date, end_date, fields=None)",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "function"
+    },
+    {
+      "page": "JQData",
+      "name": "get_ticks",
+      "purpose": "tick数据",
+      "signature": "get_ticks(security, start_dt, end_dt, count, fields)",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "function"
+    },
+    {
+      "page": "JQData",
+      "name": "get_extras",
+      "purpose": "参数：是否是ST/基金单位净值/基金累计净值/场外基金的复权净值/期货结算价",
+      "signature": "get_extras(info, security_list, start_date='2015-01-01', end_date='2015-12-31', df=True, count=None)",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "function"
+    },
+    {
+      "page": "JQData",
+      "name": "run_query",
+      "purpose": "数据库.run_query( query_object )",
+      "signature": "run_query(q)",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "function"
+    },
+    {
+      "page": "JQData",
+      "name": "normalize_code",
+      "purpose": "将股票代码转化成聚宽标准格式",
+      "signature": "normalize_code(code)",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "function"
+    },
+    {
+      "page": "JQData",
+      "name": "get_security_info",
+      "purpose": "获取单支股票信息",
+      "signature": "get_security_info(code)",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "function"
+    },
+    {
+      "page": "JQData",
+      "name": "get_all_securities",
+      "purpose": "获取所有股票信息",
+      "signature": "get_all_securities(types=[], date=None)",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "function"
+    },
+    {
+      "page": "JQData",
+      "name": "get_extras",
+      "purpose": "判断股票是否是ST",
+      "signature": "get_extras(info, security_list, start_date='2015-01-01', end_date='2015-12-31', df=True, count=None)",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "function"
+    },
+    {
+      "page": "JQData",
+      "name": "get_price",
+      "purpose": "1天/分钟行情数据",
+      "signature": "get_price(security, start_date=None, end_date=None, frequency='daily', fields=None, skip_paused=False, fq='pre', count=None, panel=True, fill_paused=True)",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "function"
+    },
+    {
+      "page": "JQData",
+      "name": "get_bars",
+      "purpose": "时间周期的行情数据（支持时间周期：'1m','5m', '15m', '30m', '60m', '120m', '1w', '1M'）",
+      "signature": "get_bars(security, count, unit='1d', fields=['date','open','high','low','close'], include_now=False, end_dt=None, fq_ref_date=None,df=True)",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "function"
+    },
+    {
+      "page": "JQData",
+      "name": "get_call_auction",
+      "purpose": "获取集合竞价数据 / 2010年至今",
+      "signature": "get_call_auction(security, start_date, end_date, fields=None)",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "function"
+    },
+    {
+      "page": "JQData",
+      "name": "get_ticks (机构)",
+      "purpose": "股票tick数据/2010-01-01起",
+      "signature": "get_ticks(security, start_dt, end_dt, count, fields, skip=True,df=True)",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "function"
+    },
+    {
+      "page": "JQData",
+      "name": "get_mtss",
+      "purpose": "获取股票的融资融券信息",
+      "signature": "get_mtss(security_list, start_date=None, end_date=None, fields=None, count=None)",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "function"
+    },
+    {
+      "page": "JQData",
+      "name": "get_margincash_stocks",
+      "purpose": "融资 标的列表",
+      "signature": "get_margincash_stocks(date)",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "function"
+    },
+    {
+      "page": "JQData",
+      "name": "get_marginsec_stocks",
+      "purpose": "融券 标的列表",
+      "signature": "get_marginsec_stocks(date)",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "function"
+    },
+    {
+      "page": "JQData",
+      "name": "STK_MT_TOTAL",
+      "purpose": "融资融券汇总数据",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "get_index_stocks",
+      "purpose": "指数成份股",
+      "signature": "get_index_stocks(index_symbol, date=None)",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "function"
+    },
+    {
+      "page": "JQData",
+      "name": "get_index_weights",
+      "purpose": "指数成份股权重（月度）",
+      "signature": "get_index_weights(index_id, date=None)",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "function"
+    },
+    {
+      "page": "JQData",
+      "name": "get_money_flow",
+      "purpose": "股票资金流向数据 / 2010至今,盘后20:00更新",
+      "signature": "get_money_flow(security_list, start_date=None, end_date=None, fields=None, count=None)",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "function"
+    },
+    {
+      "page": "JQData",
+      "name": "get_billboard_list",
+      "purpose": "龙虎榜数据 / 2005至今，盘后20:00和22:00更新",
+      "signature": "get_billboard_list(stock_list, start_date, end_date, count)",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "function"
+    },
+    {
+      "page": "JQData",
+      "name": "get_locked_shares",
+      "purpose": "限售解禁数据 / 2005至今盘后20:00更新",
+      "signature": "get_locked_shares(stock_list, start_date, end_date, forward_count)",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "function"
+    },
+    {
+      "page": "JQData",
+      "name": "STK_EXCHANGE_TRADE_INFO",
+      "purpose": "沪深市场每日成交概况 / 2005年至今，交易日20:30-24:00更新",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "STK_AH_PRICE_COMP",
+      "purpose": "市场通AH股价格对比 / 上市至今，交易日20:30-06:30更新",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "STK_EL_CONST_CHANGE",
+      "purpose": "市场通合格证券变动记录 / 上市至今，交易日20:30-06:30更新",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "STK_EXCHANGE_LINK_CALENDAR",
+      "purpose": "市场通交易日历 / 上市至今，交易日20:30-06:30更新",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "STK_EL_TOP_ACTIVATE",
+      "purpose": "市场通十大成交活跃股 / 上市至今，交易日20:30-06:30更新",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "STK_ML_QUOTA",
+      "purpose": "市场通成交与额度信息 / 上市至今，交易日20:30-06:30更新",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "STK_EXCHANGE_LINK_RATE",
+      "purpose": "市场通汇率 / 上市至今，交易日20:30-06:30更新",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "STK_HK_HOLD_INFO",
+      "purpose": "沪深港通持股数据 / 上市至今，交易日20:30-06:30更新",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "get_industries",
+      "purpose": "行业列表",
+      "signature": "get_industries(name='zjw', date=None)",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "function"
+    },
+    {
+      "page": "JQData",
+      "name": "get_industry_stocks",
+      "purpose": "行业成份股",
+      "signature": "get_industry_stocks(industry_code, date=None)",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "function"
+    },
+    {
+      "page": "JQData",
+      "name": "get_concepts",
+      "purpose": "概念列表",
+      "signature": "get_concepts()",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "function"
+    },
+    {
+      "page": "JQData",
+      "name": "get_concept_stocks",
+      "purpose": "概念成分股",
+      "signature": "get_concept_stocks(concept_code, date=None)",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "function"
+    },
+    {
+      "page": "JQData",
+      "name": "get_industry",
+      "purpose": "查询股票所属行业",
+      "signature": "get_industry(security, date=None)",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "function"
+    },
+    {
+      "page": "JQData",
+      "name": "get_concept",
+      "purpose": "股票所属概念板块",
+      "signature": "get_concept(security, date=None)",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "function"
+    },
+    {
+      "page": "JQData",
+      "name": "SW1_DAILY_PRICE",
+      "purpose": "日行情数据",
+      "signature": "finance.run_query(query(finance.SW1_DAILY_PRICE).filter(finance.SW1_DAILY_PRICE.code=='801010').limit(n))",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "function"
+    },
+    {
+      "page": "JQData",
+      "name": "get_fundamentals",
+      "purpose": "查询财务数据(附综合案例)",
+      "signature": "get_fundamentals(query_object, date=None, statDate=None)",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "function"
+    },
+    {
+      "page": "JQData",
+      "name": "get_fundamentals_continuously",
+      "purpose": "多日财务数据",
+      "signature": "get_fundamentals_continuously(query_object, end_date=None,count=1，panel=True)",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "function"
+    },
+    {
+      "page": "JQData",
+      "name": "⭐ get_valuation",
+      "purpose": "获取多个标的在指定交易日范围内的市值表数据",
+      "signature": "get_valuation(security, start_date=None, end_date=None, fields=None, count=None)",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "function"
+    },
+    {
+      "page": "JQData",
+      "name": "⭐ get_history_fundamentals",
+      "purpose": "获取多个季度/年度的历史财务数据",
+      "signature": "get_history_fundamentals(security, fields, watch_date=None, stat_date=None, count=1, interval='1q', stat_by_year=False)",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "function"
+    },
+    {
+      "page": "JQData",
+      "name": "valuation",
+      "purpose": "估值数据（市值、市盈率、市净率等） / 2005至今，每天24:00更新",
+      "signature": "get_fundamentals(query_object, date=None, statDate=None)",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "function"
+    },
+    {
+      "page": "JQData",
+      "name": "indicator",
+      "purpose": "财务指标数据 / 2005至今，每天24:00更新",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "balance",
+      "purpose": "资产负债表 / 2005至今，每天24:00更新",
+      "signature": "get_fundamentals(query(balance))",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "function"
+    },
+    {
+      "page": "JQData",
+      "name": "cash_flow",
+      "purpose": "现金流量表 / 2005至今，每天24:00更新",
+      "signature": "get_fundamentals(query(cash_flow))",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "function"
+    },
+    {
+      "page": "JQData",
+      "name": "income",
+      "purpose": "利润表 / 2005至今，每天24:00更新",
+      "signature": "get_fundamentals(query(income))",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "function"
+    },
+    {
+      "page": "JQData",
+      "name": "bank_indicator",
+      "purpose": "银行业",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "security_indicator",
+      "purpose": "券商",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "insurance_indicator",
+      "purpose": "保险",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "利润表",
+      "purpose": "合并利润表、母公司利润表",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "现金流量表",
+      "purpose": "合并现金流量表、母公司现金流量表",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "资产负债表",
+      "purpose": "合并资产负债表、母公司现金资产负债表",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "利润表",
+      "purpose": "金融类合并利润表、母公司利润表",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "现金流量表",
+      "purpose": "金融类合并现金流量表、母公司现金流量表",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "资产负债表",
+      "purpose": "金融类合并资产负债表、母公司资产负债表",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "STK_FIN_FORCAST",
+      "purpose": "业绩预告 / 2005至今，交易日18:00-24:00更新",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "STK_STATUS_CHANGE",
+      "purpose": "公司状态变动 / 2005年至今，交易日24:00更新",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "STK_COMPANY_INFO",
+      "purpose": "上市公司基本信息 / 2005年至今，交易日24:00更新",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "STK_LIST",
+      "purpose": "上市信息 / 2005年至今，交易日24:00更新",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "STK_NAME_HISTORY",
+      "purpose": "简称变更情况 / 2005年至今，交易日24:00更新",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "STK_EMPLOYEE_INFO",
+      "purpose": "员工情况 / 2005年至今，交易日24:00更新",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "STK_MANAGEMENT_INFO",
+      "purpose": "公司管理人员任职情况 / 2005年至今，交易日24:00更新",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "STK_XR_XD",
+      "purpose": "上市公司分红送股（除权除息）数据 / 2005至今，8:00更新",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "STK_SHAREHOLDER_TOP10",
+      "purpose": "十大股东",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "STK_SHAREHOLDER_FLOATING_TOP10",
+      "purpose": "十大流通股东",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "STK_SHARES_PLEDGE",
+      "purpose": "股东股份质押",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "STK_SHARES_FROZEN",
+      "purpose": "股东股份冻结",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "STK_HOLDER_NUM",
+      "purpose": "股东户数",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "STK_SHAREHOLDERS_SHARE_CHANGE",
+      "purpose": "大股东增减持",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "STK_CAPITAL_CHANGE",
+      "purpose": "上市公司股本变动",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "STK_LIMITED_SHARES_LIST",
+      "purpose": "受限股份上市公告日期",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "STK_LIMITED_SHARES_UNLIMIT",
+      "purpose": "受限股份实际解禁日期",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "normalize_code",
+      "purpose": "将期货代码转化成聚宽标准格式",
+      "signature": "normalize_code(code)",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "function"
+    },
+    {
+      "page": "JQData",
+      "name": "get_future_contracts",
+      "purpose": "获取期货可交易合约列表",
+      "signature": "get_future_contracts(underlying_symbol, date)",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "function"
+    },
+    {
+      "page": "JQData",
+      "name": "get_all_securities",
+      "purpose": "获取所有期货信息",
+      "signature": "get_all_securities(types=['futures'], date=None)",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "function"
+    },
+    {
+      "page": "JQData",
+      "name": "get_extras",
+      "purpose": "获取期货结算价/盘后17:00更新",
+      "signature": "get_extras(info, security_list, start_date='2005-01-01', end_date =None, df=True, count=None)",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "function"
+    },
+    {
+      "page": "JQData",
+      "name": "get_futures_info",
+      "purpose": "获取期货合约的信息(合约乘数，最小报价单位，交易时间)",
+      "signature": "get_futures_info(securities=None, fields=('contract_multiplier', 'tick_size', 'trade_time'))",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "function"
+    },
+    {
+      "page": "JQData",
+      "name": "get_dominant_future",
+      "purpose": "主力合约对应的标的 / 2005至今，20点更新下一交易日",
+      "signature": "get_dominant_future(underlying_symbol,date , end_date )",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "function"
+    },
+    {
+      "page": "JQData",
+      "name": "期货列表",
+      "purpose": "金融期货、商品期货",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "主力连续合约",
+      "purpose": "主力连续合约信息",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "品种指数",
+      "purpose": "品种指数信息",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "get_price",
+      "purpose": "（1天/分钟）行情数据",
+      "signature": "get_price(security, start_date=None, end_date=None, frequency='daily', fields=None, skip_paused=False, fq='pre', count=None, panel=True, fill_paused=True)",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "function"
+    },
+    {
+      "page": "JQData",
+      "name": "get_bars",
+      "purpose": "时间周期的行情数据（支持时间周期：'1m','5m', '15m', '30m', '60m', '120m', '1w', '1M'）",
+      "signature": "get_bars(security, count, unit='1d', fields=['date','open','high','low','close'], include_now=False, end_dt=None, fq_ref_date=None,df=True)",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "function"
+    },
+    {
+      "page": "JQData",
+      "name": "get_ticks (机构)",
+      "purpose": "金融期货和商品期货tick数据/2010-01-01 起（付费）",
+      "signature": "get_ticks(security, start_dt, end_dt, count, fields, skip,df=True)",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "function"
+    },
+    {
+      "page": "JQData",
+      "name": "FUT_GLOBAL_DAILY",
+      "purpose": "外盘日行情数据 / 上市至今，盘前09:00更新",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "FUT_MEMBER_POSITION_RANK",
+      "purpose": "龙虎榜数据 / 2005年至今，盘后19:00，22:00更新",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "FUT_WAREHOUSE_RECEIPT",
+      "purpose": "仓单数据 / 2005年至今，盘后20:00更新",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "normalize_code",
+      "purpose": "将场内基金代码转化成聚宽标准格式",
+      "signature": "normalize_code(code)",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "function"
+    },
+    {
+      "page": "JQData",
+      "name": "get_security_info",
+      "purpose": "获取单只基金信息/ 2005至今，8:00更新",
+      "signature": "get_security_info(code)",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "function"
+    },
+    {
+      "page": "JQData",
+      "name": "get_all_securities",
+      "purpose": "获取所有基金信息/ 2005至今，8:00更新",
+      "signature": "get_all_securities(types=[], date=None)",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "function"
+    },
+    {
+      "page": "JQData",
+      "name": "get_extras",
+      "purpose": "基金累计净值/基金单位净值/场外基金的复权净值——2005至今，下一个交易日10点之前更新",
+      "signature": "get_extras(info, security_list, start_date='2015-01-01', end_date='2015-12-31', df=True, count=None)",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "function"
+    },
+    {
+      "page": "JQData",
+      "name": "FUND_SHARE_DAILY",
+      "purpose": "基金份额数据（二级市场）/ 2005-02-23至今，下一个交易日10点之前更新",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "get_price",
+      "purpose": "1天/分钟行情数据",
+      "signature": "get_price(security, start_date=None, end_date=None, frequency='daily', fields=None, skip_paused=False, fq='pre', count=None, panel=True, fill_paused=True)",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "function"
+    },
+    {
+      "page": "JQData",
+      "name": "get_bars",
+      "purpose": "时间周期的行情数据（支持时间周期：'1m','5m', '15m', '30m', '60m', '120m', '1w', '1M'）",
+      "signature": "get_bars(security, count, unit='1d', fields=['date','open','high','low','close'], include_now=False, end_dt=None, fq_ref_date=None,df=True)",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "function"
+    },
+    {
+      "page": "JQData",
+      "name": "get_call_auction",
+      "purpose": "获取集合竞价数据 / 2019年至今",
+      "signature": "get_call_auction(security, start_date, end_date, fields=None)",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "function"
+    },
+    {
+      "page": "JQData",
+      "name": "get_ticks (机构)",
+      "purpose": "获取场内基金tick数据 / 2019-01-01 至今",
+      "signature": "get_ticks(security, start_dt, end_dt, count, fields, skip,df)",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "function"
+    },
+    {
+      "page": "JQData",
+      "name": "get_mtss",
+      "purpose": "获取基金的融资融券信息",
+      "signature": "get_mtss(security_list, start_date=None, end_date=None, fields=None, count=None)",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "function"
+    },
+    {
+      "page": "JQData",
+      "name": "get_margincash_stocks",
+      "purpose": "融资 标的列表",
+      "signature": "get_margincash_stocks(date)",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "function"
+    },
+    {
+      "page": "JQData",
+      "name": "get_marginsec_stocks",
+      "purpose": "融券 标的列表",
+      "signature": "get_marginsec_stocks(date)",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "function"
+    },
+    {
+      "page": "JQData",
+      "name": "STK_MT_TOTAL",
+      "purpose": "融资融券汇总数据",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "FUND_MAIN_INFO",
+      "purpose": "基金主体信息 / 上市至今，盘后24:00更新",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "FUND_NET_VALUE",
+      "purpose": "基金净值信息 / 上市至今，盘前9:00更新",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "FUND_PORTFOLIO_STOCK",
+      "purpose": "基金持股信息 / 上市至今，盘后24:00更新",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "FUND_PORTFOLIO_BOND",
+      "purpose": "基金持有的债券信息 / 上市至今，盘后24:00更新",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "FUND_PORTFOLIO",
+      "purpose": "基金资产组合概况 / 上市至今，盘后24:00更新",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "FUND_FIN_INDICATOR",
+      "purpose": "基金财务指标信息 / 上市至今，盘后24:00更新",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "FUND_MF_DAILY_PROFIT",
+      "purpose": "货币基金收益日报 / 上市至今，盘后24:00更新",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "FUND_DIVIDEND",
+      "purpose": "基金分红拆分合并信息 / 上市至今，盘后24:00更新",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "get_security_info",
+      "purpose": "获取单只指数信息",
+      "signature": "get_security_info(code)",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "function"
+    },
+    {
+      "page": "JQData",
+      "name": "get_all_securities",
+      "purpose": "获取所有指数信息",
+      "signature": "get_all_securities(types=[], date=None)",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "function"
+    },
+    {
+      "page": "JQData",
+      "name": "get_price",
+      "purpose": "（1天/分钟）行情数据",
+      "signature": "get_price(security, start_date=None, end_date=None, frequency='daily', fields=None, skip_paused=False, fq='pre', count=None, panel=True, fill_paused=True)",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "function"
+    },
+    {
+      "page": "JQData",
+      "name": "get_bars",
+      "purpose": "指定时间周期的指数行情（支持时间周期：'1m','5m', '15m', '30m', '60m', '120m', '1w', '1M'）",
+      "signature": "get_bars(security, count, unit='1d', fields=['date','open','high','low','close'], include_now=False, end_dt=None, fq_ref_date=None,df=True)",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "function"
+    },
+    {
+      "page": "JQData",
+      "name": "get_call_auction",
+      "purpose": "获取集合竞价数据 / 2017年至今",
+      "signature": "get_call_auction(security, start_date, end_date, fields=None)",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "function"
+    },
+    {
+      "page": "JQData",
+      "name": "get_ticks (机构)",
+      "purpose": "指数tick数据 / 2017-01-01至今",
+      "signature": "get_ticks(security, start_dt=None, end_dt=None, count=None, fields=None, skip=True, df=True)",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "function"
+    },
+    {
+      "page": "JQData",
+      "name": "get_index_stocks",
+      "purpose": "指数成份股",
+      "signature": "get_index_stocks(index_symbol, date=None)",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "function"
+    },
+    {
+      "page": "JQData",
+      "name": "get_index_weights",
+      "purpose": "指数成份股权重（月度）",
+      "signature": "get_index_weights(index_id, date=None)",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "function"
+    },
+    {
+      "page": "JQData",
+      "name": "get_all_securities",
+      "purpose": "获取所有期权信息 / 上市至今，交易日08:30、17:30 更新",
+      "signature": "get_all_securities(types=[], date=None)",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "function"
+    },
+    {
+      "page": "JQData",
+      "name": "OPT_CONTRACT_INFO",
+      "purpose": "合约资料 / 上市至今，盘后18:00更新",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "OPT_ADJUSTMENT",
+      "purpose": "合约调整记录 / 上市至今，盘后18:00更新",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "OPT_DAILY_PREOPEN",
+      "purpose": "每日盘前静态文件 / 上市至今，盘前9:05更新",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "OPT_DAILY_PRICE",
+      "purpose": "期权日行情数据（查表）/ 上市至今，盘后20:10更新",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "get_price",
+      "purpose": "（1天/分钟）行情数据",
+      "signature": "get_price(security, start_date=None, end_date=None, frequency='daily', fields=None, skip_paused=False, fq='pre', count=None, panel=True, fill_paused=True)",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "function"
+    },
+    {
+      "page": "JQData",
+      "name": "get_bars",
+      "purpose": "时间周期的行情数据（支持时间周期：'1m','5m', '15m', '30m', '60m', '120m', '1w', '1M'）",
+      "signature": "get_bars(security, count, unit='1d', fields=['date','open','high','low','close'], include_now=False, end_dt=None, fq_ref_date=None,df=True)",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "function"
+    },
+    {
+      "page": "JQData",
+      "name": "get_call_auction",
+      "purpose": "获取集合竞价数据",
+      "signature": "get_call_auction(security, start_date, end_date, fields=None)",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "function"
+    },
+    {
+      "page": "JQData",
+      "name": "get_ticks (机构)",
+      "purpose": "tick数据 / 上证ETF期权：2017-01-01至今，股指期权：2019-12-24至今，商品期权：2019-12-02至今",
+      "signature": "get_ticks(security, start_dt, end_dt, count, fields,df)",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "function"
+    },
+    {
+      "page": "JQData",
+      "name": "OPT_TRADE_RANK_STK",
+      "purpose": "沪深ETF期权交易和持仓排名统计 / 上市至今，下一交易日盘前8:05更新",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "OPT_EXERCISE_INFO",
+      "purpose": "期权行权交收信息 / 上市至今，每日10:45更新",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "OPT_RISK_INDICATOR",
+      "purpose": "期权风险指标数据 / 上市至今，下一交易日盘前8:05更新",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "债券使用说明",
+      "purpose": "债券使用说明",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "BOND_BASIC_INFO",
+      "purpose": "债券基本信息",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "BOND_COUPON",
+      "purpose": "债券票面利率",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "BOND_INTEREST_PAYMENT",
+      "purpose": "付息事件",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "REPO_DAILY_PRICE",
+      "purpose": "国债逆回购日行情 / 上市至今，每日19：00、22:00更新",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "normalize_code",
+      "purpose": "将可转债代码转化成聚宽标准格式",
+      "signature": "normalize_code(code)",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "function"
+    },
+    {
+      "page": "JQData",
+      "name": "get_security_info",
+      "purpose": "获取单支可转债信息",
+      "signature": "get_security_info(code)",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "function"
+    },
+    {
+      "page": "JQData",
+      "name": "get_all_securities",
+      "purpose": "获取所有可转债信息",
+      "signature": "get_all_securities(types=[], date=None)",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "function"
+    },
+    {
+      "page": "JQData",
+      "name": "CONBOND_BASIC_INFO",
+      "purpose": "可转债基本资料 / 上市至今，每日19：00、22:00更新",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "CONBOND_CONVERT_PRICE_ADJUST",
+      "purpose": "可转债转股价格调整 / 上市至今，每日19：00、22:00更新",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "CONBOND_DAILY_CONVERT",
+      "purpose": "可转债每日转股统计 / 2000-7-12至今，下一交易日 8:30、12：30更新",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "get_price",
+      "purpose": "可转债（1天/分钟）行情数据 / 2019年至今，盘后15点更新",
+      "signature": "get_price(security, start_date=None, end_date=None, frequency='daily', fields=None, skip_paused=False, fq='pre', count=None)",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "function"
+    },
+    {
+      "page": "JQData",
+      "name": "get_bars",
+      "purpose": "时间周期的行情数据（支持时间周期：'1m','5m', '15m', '30m', '60m', '120m', '1w', '1M'）",
+      "signature": "get_bars(security, count, unit='1d', fields=['date','open','high','low','close'], include_now=False, end_dt=None, fq_ref_date=None,df=True)",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "function"
+    },
+    {
+      "page": "JQData",
+      "name": "get_call_auction",
+      "purpose": "获取集合竞价数据 / 2010年至今",
+      "signature": "get_call_auction(security, start_date, end_date, fields=None)",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "function"
+    },
+    {
+      "page": "JQData",
+      "name": "get_ticks (机构)",
+      "purpose": "可转债tick数据/2019年起",
+      "signature": "get_ticks(security, start_dt, end_dt, count, fields, skip=True,df=True)",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "function"
+    },
+    {
+      "page": "JQData",
+      "name": "CONBOND_DAILY_PRICE",
+      "purpose": "可转债日行情（查表） / 2018-09-13至今，每日19：00、22:00更新",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "get_price",
+      "purpose": "可转债（1天/分钟）行情数据 / 2019年至今，盘后15点更新",
+      "signature": "get_price(security, start_date=None, end_date=None, frequency='daily', fields=None, skip_paused=False, fq='pre', count=None)",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "function"
+    },
+    {
+      "page": "JQData",
+      "name": "get_bars",
+      "purpose": "时间周期的行情数据（支持时间周期：'1m','5m', '15m', '30m', '60m', '120m', '1w', '1M'）",
+      "signature": "get_bars(security, count, unit='1d', fields=['date','open','high','low','close'], include_now=False, end_dt=None, fq_ref_date=None,df=True)",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "function"
+    },
+    {
+      "page": "JQData",
+      "name": "get_ticks (机构)",
+      "purpose": "可转债tick数据/2019年起",
+      "signature": "get_ticks(security, start_dt, end_dt, count, fields, skip=True,df=True)",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "function"
+    },
+    {
+      "page": "JQData",
+      "name": "数据调用方法",
+      "purpose": "注意使用jqdatasdk，数据调用应该是from jqdatasdk import *，而不是 from jqdata import *",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "农业",
+      "purpose": "",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "国内贸易",
+      "purpose": "",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "就业与工资",
+      "purpose": "",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "资源环境",
+      "purpose": "",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "房地产行业",
+      "purpose": "",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "金融业",
+      "purpose": "",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "财政政策",
+      "purpose": "",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "固定资产投资",
+      "purpose": "",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "对外贸易",
+      "purpose": "",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "景气指数",
+      "purpose": "",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "工业",
+      "purpose": "",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "保险业",
+      "purpose": "",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "国民经济",
+      "purpose": "",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "人民生活",
+      "purpose": "",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "人口信息",
+      "purpose": "",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "CCTV_NEWS",
+      "purpose": "新闻联播文本数据",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "股票tick数据",
+      "purpose": "2010-01-01起",
+      "signature": "get_ticks(security, start_dt, end_dt, count, fields, skip=True,df=True)",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "function"
+    },
+    {
+      "page": "JQData",
+      "name": "期货tick数据",
+      "purpose": "2010-01-01 起",
+      "signature": "get_ticks(security, start_dt, end_dt, count, fields, skip,df=True)",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "function"
+    },
+    {
+      "page": "JQData",
+      "name": "期权tick数据",
+      "purpose": "上交所ETF（2017-01-01起），商品期权（2019-12-02起）",
+      "signature": "get_ticks(security, start_dt, end_dt, count, fields,df)",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "function"
+    },
+    {
+      "page": "JQData",
+      "name": "场内基金tick数据",
+      "purpose": "2019-01-01起",
+      "signature": "get_ticks(security, start_dt, end_dt, count, fields, skip,df)",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "function"
+    },
+    {
+      "page": "JQData",
+      "name": "指数tick数据",
+      "purpose": "2017-01-01起",
+      "signature": "get_ticks(security, start_dt=None, end_dt=None, count=None, fields=None, skip=True, df=True)",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "function"
+    },
+    {
+      "page": "JQData",
+      "name": "get_factor_values",
+      "purpose": "因子值",
+      "signature": "get_factor_values(securities, factors, start_date, end_date, count)",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "function"
+    },
+    {
+      "page": "JQData",
+      "name": "get_all_factors",
+      "purpose": "聚宽因子库中所有的因子",
+      "signature": "get_all_factors()",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "function"
+    },
+    {
+      "page": "JQData",
+      "name": "get_factor_effect",
+      "purpose": "单因子分层回测函数",
+      "signature": "get_factor_effect(security, start_date, end_date, period, factor, group_num=5)",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "function"
+    },
+    {
+      "page": "JQData",
+      "name": "因子列表",
+      "purpose": "因子列表",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "Alpha 101 因子",
+      "purpose": "Alpha 101 因子",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "Alpha 191 因子",
+      "purpose": "Alpha 191 因子",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "技术指标",
+      "purpose": "技术分析指标",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "师生活动",
+      "purpose": "师生活动",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "论文支持活动",
+      "purpose": "论文支持活动",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "JQData",
+      "name": "试用账号延期活动",
+      "purpose": "试用账号延期活动",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData",
+      "kind": "topic"
+    },
+    {
+      "page": "optimizer",
+      "name": "目标函数(target)",
+      "purpose": "优化目标函数，只能选择一个",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=optimizer",
+      "kind": "topic"
+    },
+    {
+      "page": "optimizer",
+      "name": "限制函数(constraints)",
+      "purpose": "用以对组合总权重进行限制，可设置一个或多个相同/不同类别的函数",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=optimizer",
+      "kind": "topic"
+    },
+    {
+      "page": "optimizer",
+      "name": "边界函数(bounds)",
+      "purpose": "用以对组合中单标的权重进行限制，可设置一个或多个相同/不同类别的函数",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=optimizer",
+      "kind": "topic"
+    },
+    {
+      "page": "optimizer",
+      "name": "示例代码",
+      "purpose": "给了五个应用示例，修改参数即可生效",
+      "signature": "",
+      "source": "https://www.joinquant.com/help/api/help?name=optimizer",
+      "kind": "topic"
+    }
+  ],
+  "topics": [
+    {
+      "page": "api",
+      "level": "h2",
+      "title": "API文档",
+      "source": "https://www.joinquant.com/help/api/help?name=api"
+    },
+    {
+      "page": "api",
+      "level": "h2",
+      "title": "开始写策略",
+      "source": "https://www.joinquant.com/help/api/help?name=api"
+    },
+    {
+      "page": "api",
+      "level": "h3",
+      "title": "简单但是完整的策略",
+      "source": "https://www.joinquant.com/help/api/help?name=api"
+    },
+    {
+      "page": "api",
+      "level": "h3",
+      "title": "实用的策略",
+      "source": "https://www.joinquant.com/help/api/help?name=api"
+    },
+    {
+      "page": "api",
+      "level": "h2",
+      "title": "策略引擎介绍",
+      "source": "https://www.joinquant.com/help/api/help?name=api"
+    },
+    {
+      "page": "api",
+      "level": "h3",
+      "title": "安全",
+      "source": "https://www.joinquant.com/help/api/help?name=api"
+    },
+    {
+      "page": "api",
+      "level": "h3",
+      "title": "数据",
+      "source": "https://www.joinquant.com/help/api/help?name=api"
+    },
+    {
+      "page": "api",
+      "level": "h3",
+      "title": "运行频率",
+      "source": "https://www.joinquant.com/help/api/help?name=api"
+    },
+    {
+      "page": "api",
+      "level": "h3",
+      "title": "运行时间",
+      "source": "https://www.joinquant.com/help/api/help?name=api"
+    },
+    {
+      "page": "api",
+      "level": "h3",
+      "title": "订单处理",
+      "source": "https://www.joinquant.com/help/api/help?name=api"
+    },
+    {
+      "page": "api",
+      "level": "h2",
+      "title": "撮合流程",
+      "source": "https://www.joinquant.com/help/api/help?name=api"
+    },
+    {
+      "page": "api",
+      "level": "h3",
+      "title": "下单时的撮合逻辑",
+      "source": "https://www.joinquant.com/help/api/help?name=api"
+    },
+    {
+      "page": "api",
+      "level": "h4",
+      "title": "未启用盘口撮合时",
+      "source": "https://www.joinquant.com/help/api/help?name=api"
+    },
+    {
+      "page": "api",
+      "level": "h4",
+      "title": "启用盘口撮合时",
+      "source": "https://www.joinquant.com/help/api/help?name=api"
+    },
+    {
+      "page": "api",
+      "level": "h3",
+      "title": "挂单时的撮合逻辑",
+      "source": "https://www.joinquant.com/help/api/help?name=api"
+    },
+    {
+      "page": "api",
+      "level": "h4",
+      "title": "按分钟Bar撮合",
+      "source": "https://www.joinquant.com/help/api/help?name=api"
+    },
+    {
+      "page": "api",
+      "level": "h4",
+      "title": "按tick撮合",
+      "source": "https://www.joinquant.com/help/api/help?name=api"
+    },
+    {
+      "page": "api",
+      "level": "h2",
+      "title": "非交易时段下单的特别说明",
+      "source": "https://www.joinquant.com/help/api/help?name=api"
+    },
+    {
+      "page": "api",
+      "level": "h3",
+      "title": "拆分合并与分红",
+      "source": "https://www.joinquant.com/help/api/help?name=api"
+    },
+    {
+      "page": "api",
+      "level": "h3",
+      "title": "股息红利税的计算",
+      "source": "https://www.joinquant.com/help/api/help?name=api"
+    },
+    {
+      "page": "api",
+      "level": "h3",
+      "title": "滑点",
+      "source": "https://www.joinquant.com/help/api/help?name=api"
+    },
+    {
+      "page": "api",
+      "level": "h3",
+      "title": "交易税费",
+      "source": "https://www.joinquant.com/help/api/help?name=api"
+    },
+    {
+      "page": "api",
+      "level": "h3",
+      "title": "风险指标",
+      "source": "https://www.joinquant.com/help/api/help?name=api"
+    },
+    {
+      "page": "api",
+      "level": "h3",
+      "title": "回测环境",
+      "source": "https://www.joinquant.com/help/api/help?name=api"
+    },
+    {
+      "page": "api",
+      "level": "h3",
+      "title": "回测过程",
+      "source": "https://www.joinquant.com/help/api/help?name=api"
+    },
+    {
+      "page": "api",
+      "level": "h3",
+      "title": "模拟盘注意事项",
+      "source": "https://www.joinquant.com/help/api/help?name=api"
+    },
+    {
+      "page": "api",
+      "level": "h3",
+      "title": "模拟交易和回测的差别",
+      "source": "https://www.joinquant.com/help/api/help?name=api"
+    },
+    {
+      "page": "api",
+      "level": "h3",
+      "title": "期货交割日",
+      "source": "https://www.joinquant.com/help/api/help?name=api"
+    },
+    {
+      "page": "api",
+      "level": "h3",
+      "title": "还券细则",
+      "source": "https://www.joinquant.com/help/api/help?name=api"
+    },
+    {
+      "page": "api",
+      "level": "h3",
+      "title": "投资组合优化器",
+      "source": "https://www.joinquant.com/help/api/help?name=api"
+    },
+    {
+      "page": "api",
+      "level": "h4",
+      "title": "示例",
+      "source": "https://www.joinquant.com/help/api/help?name=api"
+    },
+    {
+      "page": "api",
+      "level": "h2",
+      "title": "策略程序架构♠",
+      "source": "https://www.joinquant.com/help/api/help?name=api"
+    },
+    {
+      "page": "api",
+      "level": "h2",
+      "title": "策略API介绍",
+      "source": "https://www.joinquant.com/help/api/help?name=api"
+    },
+    {
+      "page": "api",
+      "level": "h3",
+      "title": "注意事项",
+      "source": "https://www.joinquant.com/help/api/help?name=api"
+    },
+    {
+      "page": "api",
+      "level": "h3",
+      "title": "策略设置函数",
+      "source": "https://www.joinquant.com/help/api/help?name=api"
+    },
+    {
+      "page": "api",
+      "level": "h3",
+      "title": "数据获取函数",
+      "source": "https://www.joinquant.com/help/api/help?name=api"
+    },
+    {
+      "page": "api",
+      "level": "h3",
+      "title": "jqlib",
+      "source": "https://www.joinquant.com/help/api/help?name=api"
+    },
+    {
+      "page": "api",
+      "level": "h3",
+      "title": "数据处理函数",
+      "source": "https://www.joinquant.com/help/api/help?name=api"
+    },
+    {
+      "page": "api",
+      "level": "h3",
+      "title": "组合优化函数",
+      "source": "https://www.joinquant.com/help/api/help?name=api"
+    },
+    {
+      "page": "api",
+      "level": "h4",
+      "title": "相关参数",
+      "source": "https://www.joinquant.com/help/api/help?name=api"
+    },
+    {
+      "page": "api",
+      "level": "h3",
+      "title": "交易函数",
+      "source": "https://www.joinquant.com/help/api/help?name=api"
+    },
+    {
+      "page": "api",
+      "level": "h3",
+      "title": "对象♠",
+      "source": "https://www.joinquant.com/help/api/help?name=api"
+    },
+    {
+      "page": "api",
+      "level": "h3",
+      "title": "其他函数",
+      "source": "https://www.joinquant.com/help/api/help?name=api"
+    },
+    {
+      "page": "api",
+      "level": "h3",
+      "title": "策略组合操作",
+      "source": "https://www.joinquant.com/help/api/help?name=api"
+    },
+    {
+      "page": "api",
+      "level": "h3",
+      "title": "Tick 级策略专用函数",
+      "source": "https://www.joinquant.com/help/api/help?name=api"
+    },
+    {
+      "page": "api",
+      "level": "h4",
+      "title": "Tick级专用API",
+      "source": "https://www.joinquant.com/help/api/help?name=api"
+    },
+    {
+      "page": "api",
+      "level": "h4",
+      "title": "Tick级示例策略",
+      "source": "https://www.joinquant.com/help/api/help?name=api"
+    },
+    {
+      "page": "api",
+      "level": "h3",
+      "title": "融资融券专用函数",
+      "source": "https://www.joinquant.com/help/api/help?name=api"
+    },
+    {
+      "page": "api",
+      "level": "h4",
+      "title": "初始化融资融券账户",
+      "source": "https://www.joinquant.com/help/api/help?name=api"
+    },
+    {
+      "page": "api",
+      "level": "h4",
+      "title": "融资融券专用API",
+      "source": "https://www.joinquant.com/help/api/help?name=api"
+    },
+    {
+      "page": "api",
+      "level": "h3",
+      "title": "期货策略专用函数",
+      "source": "https://www.joinquant.com/help/api/help?name=api"
+    },
+    {
+      "page": "api",
+      "level": "h4",
+      "title": "初始化期货账户",
+      "source": "https://www.joinquant.com/help/api/help?name=api"
+    },
+    {
+      "page": "api",
+      "level": "h4",
+      "title": "期货信息",
+      "source": "https://www.joinquant.com/help/api/help?name=api"
+    },
+    {
+      "page": "api",
+      "level": "h4",
+      "title": "期货专用API",
+      "source": "https://www.joinquant.com/help/api/help?name=api"
+    },
+    {
+      "page": "api",
+      "level": "h3",
+      "title": "归因分析说明",
+      "source": "https://www.joinquant.com/help/api/help?name=api"
+    },
+    {
+      "page": "api",
+      "level": "h4",
+      "title": "净值分析",
+      "source": "https://www.joinquant.com/help/api/help?name=api"
+    },
+    {
+      "page": "api",
+      "level": "h4",
+      "title": "收益分析",
+      "source": "https://www.joinquant.com/help/api/help?name=api"
+    },
+    {
+      "page": "api",
+      "level": "h4",
+      "title": "风险指标",
+      "source": "https://www.joinquant.com/help/api/help?name=api"
+    },
+    {
+      "page": "api",
+      "level": "h4",
+      "title": "持仓分析",
+      "source": "https://www.joinquant.com/help/api/help?name=api"
+    },
+    {
+      "page": "api",
+      "level": "h4",
+      "title": "Brinson 归因",
+      "source": "https://www.joinquant.com/help/api/help?name=api"
+    },
+    {
+      "page": "api",
+      "level": "h4",
+      "title": "因子分析",
+      "source": "https://www.joinquant.com/help/api/help?name=api"
+    },
+    {
+      "page": "api",
+      "level": "h4",
+      "title": "风格分析",
+      "source": "https://www.joinquant.com/help/api/help?name=api"
+    },
+    {
+      "page": "api",
+      "level": "h4",
+      "title": "风险分析",
+      "source": "https://www.joinquant.com/help/api/help?name=api"
+    },
+    {
+      "page": "api",
+      "level": "h2",
+      "title": "策略示例",
+      "source": "https://www.joinquant.com/help/api/help?name=api"
+    },
+    {
+      "page": "api",
+      "level": "h3",
+      "title": "均线策略",
+      "source": "https://www.joinquant.com/help/api/help?name=api"
+    },
+    {
+      "page": "api",
+      "level": "h3",
+      "title": "多股票持仓示例",
+      "source": "https://www.joinquant.com/help/api/help?name=api"
+    },
+    {
+      "page": "api",
+      "level": "h3",
+      "title": "多股票追涨策略",
+      "source": "https://www.joinquant.com/help/api/help?name=api"
+    },
+    {
+      "page": "api",
+      "level": "h3",
+      "title": "万圣节效应策略",
+      "source": "https://www.joinquant.com/help/api/help?name=api"
+    },
+    {
+      "page": "Stock",
+      "level": "h2",
+      "title": "获取股票数据",
+      "source": "https://www.joinquant.com/help/api/help?name=Stock"
+    },
+    {
+      "page": "Stock",
+      "level": "h3",
+      "title": "获取股票概况",
+      "source": "https://www.joinquant.com/help/api/help?name=Stock"
+    },
+    {
+      "page": "Stock",
+      "level": "h4",
+      "title": "获取单支股票数据",
+      "source": "https://www.joinquant.com/help/api/help?name=Stock"
+    },
+    {
+      "page": "Stock",
+      "level": "h4",
+      "title": "获取所有股票数据",
+      "source": "https://www.joinquant.com/help/api/help?name=Stock"
+    },
+    {
+      "page": "Stock",
+      "level": "h4",
+      "title": "判断股票是否是ST",
+      "source": "https://www.joinquant.com/help/api/help?name=Stock"
+    },
+    {
+      "page": "Stock",
+      "level": "h4",
+      "title": "获取股票的融资融券信息",
+      "source": "https://www.joinquant.com/help/api/help?name=Stock"
+    },
+    {
+      "page": "Stock",
+      "level": "h3",
+      "title": "股票分类信息",
+      "source": "https://www.joinquant.com/help/api/help?name=Stock"
+    },
+    {
+      "page": "Stock",
+      "level": "h4",
+      "title": "获取指数成份股",
+      "source": "https://www.joinquant.com/help/api/help?name=Stock"
+    },
+    {
+      "page": "Stock",
+      "level": "h4",
+      "title": "获取行业、概念成份股",
+      "source": "https://www.joinquant.com/help/api/help?name=Stock"
+    },
+    {
+      "page": "Stock",
+      "level": "h4",
+      "title": "查询股票所属行业",
+      "source": "https://www.joinquant.com/help/api/help?name=Stock"
+    },
+    {
+      "page": "Stock",
+      "level": "h3",
+      "title": "获取行情数据",
+      "source": "https://www.joinquant.com/help/api/help?name=Stock"
+    },
+    {
+      "page": "Stock",
+      "level": "h2",
+      "title": "获取融资融券标的列表",
+      "source": "https://www.joinquant.com/help/api/help?name=Stock"
+    },
+    {
+      "page": "Stock",
+      "level": "h3",
+      "title": "获取融资标的列表",
+      "source": "https://www.joinquant.com/help/api/help?name=Stock"
+    },
+    {
+      "page": "Stock",
+      "level": "h3",
+      "title": "获取融券标的列表",
+      "source": "https://www.joinquant.com/help/api/help?name=Stock"
+    },
+    {
+      "page": "Stock",
+      "level": "h2",
+      "title": "获取融资融券汇总数据",
+      "source": "https://www.joinquant.com/help/api/help?name=Stock"
+    },
+    {
+      "page": "Stock",
+      "level": "h2",
+      "title": "获取股票资金流向数据",
+      "source": "https://www.joinquant.com/help/api/help?name=Stock"
+    },
+    {
+      "page": "Stock",
+      "level": "h2",
+      "title": "获取龙虎榜数据",
+      "source": "https://www.joinquant.com/help/api/help?name=Stock"
+    },
+    {
+      "page": "Stock",
+      "level": "h2",
+      "title": "上市公司分红送股（除权除息）数据",
+      "source": "https://www.joinquant.com/help/api/help?name=Stock"
+    },
+    {
+      "page": "Stock",
+      "level": "h2",
+      "title": "沪深市场每日成交概况",
+      "source": "https://www.joinquant.com/help/api/help?name=Stock"
+    },
+    {
+      "page": "Stock",
+      "level": "h2",
+      "title": "市场通（沪港通，深港通和港股通）",
+      "source": "https://www.joinquant.com/help/api/help?name=Stock"
+    },
+    {
+      "page": "Stock",
+      "level": "h3",
+      "title": "合格证券变动记录",
+      "source": "https://www.joinquant.com/help/api/help?name=Stock"
+    },
+    {
+      "page": "Stock",
+      "level": "h3",
+      "title": "市场通交易日历",
+      "source": "https://www.joinquant.com/help/api/help?name=Stock"
+    },
+    {
+      "page": "Stock",
+      "level": "h3",
+      "title": "市场通十大成交活跃股",
+      "source": "https://www.joinquant.com/help/api/help?name=Stock"
+    },
+    {
+      "page": "Stock",
+      "level": "h3",
+      "title": "市场通成交与额度信息",
+      "source": "https://www.joinquant.com/help/api/help?name=Stock"
+    },
+    {
+      "page": "Stock",
+      "level": "h3",
+      "title": "市场通汇率",
+      "source": "https://www.joinquant.com/help/api/help?name=Stock"
+    },
+    {
+      "page": "Stock",
+      "level": "h3",
+      "title": "沪深港通持股数据",
+      "source": "https://www.joinquant.com/help/api/help?name=Stock"
+    },
+    {
+      "page": "Stock",
+      "level": "h2",
+      "title": "上市公司概况",
+      "source": "https://www.joinquant.com/help/api/help?name=Stock"
+    },
+    {
+      "page": "Stock",
+      "level": "h3",
+      "title": "上市公司基本信息",
+      "source": "https://www.joinquant.com/help/api/help?name=Stock"
+    },
+    {
+      "page": "Stock",
+      "level": "h3",
+      "title": "上市公司状态变动",
+      "source": "https://www.joinquant.com/help/api/help?name=Stock"
+    },
+    {
+      "page": "Stock",
+      "level": "h3",
+      "title": "股票上市信息",
+      "source": "https://www.joinquant.com/help/api/help?name=Stock"
+    },
+    {
+      "page": "Stock",
+      "level": "h3",
+      "title": "股票简称变更情况",
+      "source": "https://www.joinquant.com/help/api/help?name=Stock"
+    },
+    {
+      "page": "Stock",
+      "level": "h3",
+      "title": "上市公司员工情况",
+      "source": "https://www.joinquant.com/help/api/help?name=Stock"
+    },
+    {
+      "page": "Stock",
+      "level": "h2",
+      "title": "上市公司股东和股本信息",
+      "source": "https://www.joinquant.com/help/api/help?name=Stock"
+    },
+    {
+      "page": "Stock",
+      "level": "h3",
+      "title": "十大股东",
+      "source": "https://www.joinquant.com/help/api/help?name=Stock"
+    },
+    {
+      "page": "Stock",
+      "level": "h3",
+      "title": "十大流通股东",
+      "source": "https://www.joinquant.com/help/api/help?name=Stock"
+    },
+    {
+      "page": "Stock",
+      "level": "h3",
+      "title": "股东股份质押",
+      "source": "https://www.joinquant.com/help/api/help?name=Stock"
+    },
+    {
+      "page": "Stock",
+      "level": "h3",
+      "title": "股东股份冻结",
+      "source": "https://www.joinquant.com/help/api/help?name=Stock"
+    },
+    {
+      "page": "Stock",
+      "level": "h3",
+      "title": "股东户数",
+      "source": "https://www.joinquant.com/help/api/help?name=Stock"
+    },
+    {
+      "page": "Stock",
+      "level": "h3",
+      "title": "大股东增减持",
+      "source": "https://www.joinquant.com/help/api/help?name=Stock"
+    },
+    {
+      "page": "Stock",
+      "level": "h3",
+      "title": "受限股份上市公告日期",
+      "source": "https://www.joinquant.com/help/api/help?name=Stock"
+    },
+    {
+      "page": "Stock",
+      "level": "h3",
+      "title": "受限股份实际解禁日期",
+      "source": "https://www.joinquant.com/help/api/help?name=Stock"
+    },
+    {
+      "page": "Stock",
+      "level": "h3",
+      "title": "上市公司股本变动",
+      "source": "https://www.joinquant.com/help/api/help?name=Stock"
+    },
+    {
+      "page": "Stock",
+      "level": "h2",
+      "title": "获取单季度/年度财务数据",
+      "source": "https://www.joinquant.com/help/api/help?name=Stock"
+    },
+    {
+      "page": "Stock",
+      "level": "h3",
+      "title": "财务数据列表",
+      "source": "https://www.joinquant.com/help/api/help?name=Stock"
+    },
+    {
+      "page": "Stock",
+      "level": "h4",
+      "title": "市值数据",
+      "source": "https://www.joinquant.com/help/api/help?name=Stock"
+    },
+    {
+      "page": "Stock",
+      "level": "h4",
+      "title": "资产负债数据",
+      "source": "https://www.joinquant.com/help/api/help?name=Stock"
+    },
+    {
+      "page": "Stock",
+      "level": "h4",
+      "title": "现金流数据",
+      "source": "https://www.joinquant.com/help/api/help?name=Stock"
+    },
+    {
+      "page": "Stock",
+      "level": "h4",
+      "title": "利润数据",
+      "source": "https://www.joinquant.com/help/api/help?name=Stock"
+    },
+    {
+      "page": "Stock",
+      "level": "h4",
+      "title": "财务指标数据",
+      "source": "https://www.joinquant.com/help/api/help?name=Stock"
+    },
+    {
+      "page": "Stock",
+      "level": "h2",
+      "title": "获取报告期财务数据",
+      "source": "https://www.joinquant.com/help/api/help?name=Stock"
+    },
+    {
+      "page": "Stock",
+      "level": "h3",
+      "title": "审计意见(新上线数据)",
+      "source": "https://www.joinquant.com/help/api/help?name=Stock"
+    },
+    {
+      "page": "Stock",
+      "level": "h3",
+      "title": "定期报告预约披露时间表(新上线数据)",
+      "source": "https://www.joinquant.com/help/api/help?name=Stock"
+    },
+    {
+      "page": "Stock",
+      "level": "h3",
+      "title": "业绩预告",
+      "source": "https://www.joinquant.com/help/api/help?name=Stock"
+    },
+    {
+      "page": "Stock",
+      "level": "h3",
+      "title": "业绩快报(新上线数据)",
+      "source": "https://www.joinquant.com/help/api/help?name=Stock"
+    },
+    {
+      "page": "Stock",
+      "level": "h3",
+      "title": "合并利润表",
+      "source": "https://www.joinquant.com/help/api/help?name=Stock"
+    },
+    {
+      "page": "Stock",
+      "level": "h3",
+      "title": "母公司利润表",
+      "source": "https://www.joinquant.com/help/api/help?name=Stock"
+    },
+    {
+      "page": "Stock",
+      "level": "h4",
+      "title": "上市公司母公司利润表",
+      "source": "https://www.joinquant.com/help/api/help?name=Stock"
+    },
+    {
+      "page": "Stock",
+      "level": "h3",
+      "title": "合并现金流量表",
+      "source": "https://www.joinquant.com/help/api/help?name=Stock"
+    },
+    {
+      "page": "Stock",
+      "level": "h3",
+      "title": "母公司现金流量表",
+      "source": "https://www.joinquant.com/help/api/help?name=Stock"
+    },
+    {
+      "page": "Stock",
+      "level": "h3",
+      "title": "合并资产负债表",
+      "source": "https://www.joinquant.com/help/api/help?name=Stock"
+    },
+    {
+      "page": "Stock",
+      "level": "h3",
+      "title": "母公司资产负债表",
+      "source": "https://www.joinquant.com/help/api/help?name=Stock"
+    },
+    {
+      "page": "Stock",
+      "level": "h3",
+      "title": "金融类合并利润表",
+      "source": "https://www.joinquant.com/help/api/help?name=Stock"
+    },
+    {
+      "page": "Stock",
+      "level": "h4",
+      "title": "金融类合并利润表2007版",
+      "source": "https://www.joinquant.com/help/api/help?name=Stock"
+    },
+    {
+      "page": "Stock",
+      "level": "h3",
+      "title": "金融类母公司利润表",
+      "source": "https://www.joinquant.com/help/api/help?name=Stock"
+    },
+    {
+      "page": "Stock",
+      "level": "h3",
+      "title": "金融类合并现金流量表",
+      "source": "https://www.joinquant.com/help/api/help?name=Stock"
+    },
+    {
+      "page": "Stock",
+      "level": "h4",
+      "title": "金融类合并现金流量表2007版",
+      "source": "https://www.joinquant.com/help/api/help?name=Stock"
+    },
+    {
+      "page": "Stock",
+      "level": "h3",
+      "title": "金融类母公司现金流量表",
+      "source": "https://www.joinquant.com/help/api/help?name=Stock"
+    },
+    {
+      "page": "Stock",
+      "level": "h3",
+      "title": "金融类合并资产负债表",
+      "source": "https://www.joinquant.com/help/api/help?name=Stock"
+    },
+    {
+      "page": "Stock",
+      "level": "h3",
+      "title": "金融类母公司资产负债表",
+      "source": "https://www.joinquant.com/help/api/help?name=Stock"
+    },
+    {
+      "page": "Future",
+      "level": "h2",
+      "title": "获取期货数据",
+      "source": "https://www.joinquant.com/help/api/help?name=Future"
+    },
+    {
+      "page": "Future",
+      "level": "h3",
+      "title": "获取期货概况",
+      "source": "https://www.joinquant.com/help/api/help?name=Future"
+    },
+    {
+      "page": "Future",
+      "level": "h4",
+      "title": "获取单只期货信息",
+      "source": "https://www.joinquant.com/help/api/help?name=Future"
+    },
+    {
+      "page": "Future",
+      "level": "h4",
+      "title": "获取所有期货信息",
+      "source": "https://www.joinquant.com/help/api/help?name=Future"
+    },
+    {
+      "page": "Future",
+      "level": "h4",
+      "title": "期货结算价与持仓量",
+      "source": "https://www.joinquant.com/help/api/help?name=Future"
+    },
+    {
+      "page": "Future",
+      "level": "h3",
+      "title": "获取期货行情数据",
+      "source": "https://www.joinquant.com/help/api/help?name=Future"
+    },
+    {
+      "page": "Future",
+      "level": "h4",
+      "title": "获取期货行情数据",
+      "source": "https://www.joinquant.com/help/api/help?name=Future"
+    },
+    {
+      "page": "Future",
+      "level": "h4",
+      "title": "获取期货bar数据",
+      "source": "https://www.joinquant.com/help/api/help?name=Future"
+    },
+    {
+      "page": "Future",
+      "level": "h4",
+      "title": "获取期货tick数据",
+      "source": "https://www.joinquant.com/help/api/help?name=Future"
+    },
+    {
+      "page": "Future",
+      "level": "h3",
+      "title": "获取期货交易统计数据",
+      "source": "https://www.joinquant.com/help/api/help?name=Future"
+    },
+    {
+      "page": "Future",
+      "level": "h4",
+      "title": "获取期货龙虎榜数据",
+      "source": "https://www.joinquant.com/help/api/help?name=Future"
+    },
+    {
+      "page": "Future",
+      "level": "h4",
+      "title": "获取期货仓单数据",
+      "source": "https://www.joinquant.com/help/api/help?name=Future"
+    },
+    {
+      "page": "Future",
+      "level": "h3",
+      "title": "期货手续费及保证金",
+      "source": "https://www.joinquant.com/help/api/help?name=Future"
+    },
+    {
+      "page": "Future",
+      "level": "h4",
+      "title": "获取期货手续费",
+      "source": "https://www.joinquant.com/help/api/help?name=Future"
+    },
+    {
+      "page": "Future",
+      "level": "h4",
+      "title": "获取期货保证金",
+      "source": "https://www.joinquant.com/help/api/help?name=Future"
+    },
+    {
+      "page": "Future",
+      "level": "h2",
+      "title": "期货列表",
+      "source": "https://www.joinquant.com/help/api/help?name=Future"
+    },
+    {
+      "page": "Future",
+      "level": "h3",
+      "title": "金融期货列表",
+      "source": "https://www.joinquant.com/help/api/help?name=Future"
+    },
+    {
+      "page": "Future",
+      "level": "h3",
+      "title": "支持的金融期货种类",
+      "source": "https://www.joinquant.com/help/api/help?name=Future"
+    },
+    {
+      "page": "Future",
+      "level": "h4",
+      "title": "1. 沪深300指数期货合约表",
+      "source": "https://www.joinquant.com/help/api/help?name=Future"
+    },
+    {
+      "page": "Future",
+      "level": "h4",
+      "title": "2. 上证50股指期货合约表",
+      "source": "https://www.joinquant.com/help/api/help?name=Future"
+    },
+    {
+      "page": "Future",
+      "level": "h4",
+      "title": "3. 中证500股指期货合约表",
+      "source": "https://www.joinquant.com/help/api/help?name=Future"
+    },
+    {
+      "page": "Future",
+      "level": "h4",
+      "title": "4. 中证1000股指期货合约表",
+      "source": "https://www.joinquant.com/help/api/help?name=Future"
+    },
+    {
+      "page": "Future",
+      "level": "h4",
+      "title": "5. 2年期国债期货合约表",
+      "source": "https://www.joinquant.com/help/api/help?name=Future"
+    },
+    {
+      "page": "Future",
+      "level": "h4",
+      "title": "6. 5年期国债期货合约表",
+      "source": "https://www.joinquant.com/help/api/help?name=Future"
+    },
+    {
+      "page": "Future",
+      "level": "h4",
+      "title": "7. 10年期国债期货合约表",
+      "source": "https://www.joinquant.com/help/api/help?name=Future"
+    },
+    {
+      "page": "Future",
+      "level": "h4",
+      "title": "8. 30年国指期货合约表",
+      "source": "https://www.joinquant.com/help/api/help?name=Future"
+    },
+    {
+      "page": "Future",
+      "level": "h3",
+      "title": "商品期货列表",
+      "source": "https://www.joinquant.com/help/api/help?name=Future"
+    },
+    {
+      "page": "Future",
+      "level": "h3",
+      "title": "主力连续合约及品种指数",
+      "source": "https://www.joinquant.com/help/api/help?name=Future"
+    },
+    {
+      "page": "Future",
+      "level": "h3",
+      "title": "中金所",
+      "source": "https://www.joinquant.com/help/api/help?name=Future"
+    },
+    {
+      "page": "Future",
+      "level": "h3",
+      "title": "广期所",
+      "source": "https://www.joinquant.com/help/api/help?name=Future"
+    },
+    {
+      "page": "Future",
+      "level": "h3",
+      "title": "大商所",
+      "source": "https://www.joinquant.com/help/api/help?name=Future"
+    },
+    {
+      "page": "Future",
+      "level": "h3",
+      "title": "上海国际能源交易中心",
+      "source": "https://www.joinquant.com/help/api/help?name=Future"
+    },
+    {
+      "page": "Future",
+      "level": "h3",
+      "title": "上期所",
+      "source": "https://www.joinquant.com/help/api/help?name=Future"
+    },
+    {
+      "page": "Future",
+      "level": "h3",
+      "title": "郑商所",
+      "source": "https://www.joinquant.com/help/api/help?name=Future"
+    },
+    {
+      "page": "fund",
+      "level": "h2",
+      "title": "获取基金数据",
+      "source": "https://www.joinquant.com/help/api/help?name=fund"
+    },
+    {
+      "page": "fund",
+      "level": "h3",
+      "title": "基金概况：上市退市时间、代码、名称、累计/单位净值等",
+      "source": "https://www.joinquant.com/help/api/help?name=fund"
+    },
+    {
+      "page": "fund",
+      "level": "h4",
+      "title": "获取单支基金数据",
+      "source": "https://www.joinquant.com/help/api/help?name=fund"
+    },
+    {
+      "page": "fund",
+      "level": "h4",
+      "title": "获取所有基金数据",
+      "source": "https://www.joinquant.com/help/api/help?name=fund"
+    },
+    {
+      "page": "fund",
+      "level": "h4",
+      "title": "场内基金份额数据",
+      "source": "https://www.joinquant.com/help/api/help?name=fund"
+    },
+    {
+      "page": "fund",
+      "level": "h4",
+      "title": "获取场内基金tick数据",
+      "source": "https://www.joinquant.com/help/api/help?name=fund"
+    },
+    {
+      "page": "fund",
+      "level": "h4",
+      "title": "获取etf跟踪指数信息",
+      "source": "https://www.joinquant.com/help/api/help?name=fund"
+    },
+    {
+      "page": "fund",
+      "level": "h3",
+      "title": "基金列表",
+      "source": "https://www.joinquant.com/help/api/help?name=fund"
+    },
+    {
+      "page": "fund",
+      "level": "h4",
+      "title": "LOF列表",
+      "source": "https://www.joinquant.com/help/api/help?name=fund"
+    },
+    {
+      "page": "index",
+      "level": "h2",
+      "title": "获取沪深指数数据",
+      "source": "https://www.joinquant.com/help/api/help?name=index"
+    },
+    {
+      "page": "index",
+      "level": "h3",
+      "title": "指数概况",
+      "source": "https://www.joinquant.com/help/api/help?name=index"
+    },
+    {
+      "page": "index",
+      "level": "h4",
+      "title": "获取单支指数数据",
+      "source": "https://www.joinquant.com/help/api/help?name=index"
+    },
+    {
+      "page": "index",
+      "level": "h4",
+      "title": "获取所有指数数据",
+      "source": "https://www.joinquant.com/help/api/help?name=index"
+    },
+    {
+      "page": "index",
+      "level": "h4",
+      "title": "获取指数成份股",
+      "source": "https://www.joinquant.com/help/api/help?name=index"
+    },
+    {
+      "page": "index",
+      "level": "h4",
+      "title": "获取指数成份股权重",
+      "source": "https://www.joinquant.com/help/api/help?name=index"
+    },
+    {
+      "page": "index",
+      "level": "h3",
+      "title": "行情数据",
+      "source": "https://www.joinquant.com/help/api/help?name=index"
+    },
+    {
+      "page": "index",
+      "level": "h4",
+      "title": "历史行情数据",
+      "source": "https://www.joinquant.com/help/api/help?name=index"
+    },
+    {
+      "page": "index",
+      "level": "h4",
+      "title": "当前单位时间的行情数据(策略专用)",
+      "source": "https://www.joinquant.com/help/api/help?name=index"
+    },
+    {
+      "page": "index",
+      "level": "h4",
+      "title": "获取指数tick数据",
+      "source": "https://www.joinquant.com/help/api/help?name=index"
+    },
+    {
+      "page": "index",
+      "level": "h2",
+      "title": "沪深指数列表",
+      "source": "https://www.joinquant.com/help/api/help?name=index"
+    },
+    {
+      "page": "JQData",
+      "level": "h2",
+      "title": "JQData-本地量化数据说明书",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData"
+    },
+    {
+      "page": "JQData",
+      "level": "h4",
+      "title": "由于内容较多，可使用Ctrl+F搜索您需要的数据。",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData"
+    },
+    {
+      "page": "JQData",
+      "level": "h3",
+      "title": "介绍与说明",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData"
+    },
+    {
+      "page": "JQData",
+      "level": "h3",
+      "title": "试用和购买",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData"
+    },
+    {
+      "page": "JQData",
+      "level": "h3",
+      "title": "JQData 安装、登陆及流量查询",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData"
+    },
+    {
+      "page": "JQData",
+      "level": "h2",
+      "title": "JQData用户协议",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData"
+    },
+    {
+      "page": "JQData",
+      "level": "h2",
+      "title": "JQData常见报错及数据处理规则",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData"
+    },
+    {
+      "page": "JQData",
+      "level": "h3",
+      "title": "JQData常见报错",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData"
+    },
+    {
+      "page": "JQData",
+      "level": "h3",
+      "title": "数据处理规则",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData"
+    },
+    {
+      "page": "JQData",
+      "level": "h2",
+      "title": "通用接口",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData"
+    },
+    {
+      "page": "JQData",
+      "level": "h3",
+      "title": "JQData证券代码格式",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData"
+    },
+    {
+      "page": "JQData",
+      "level": "h3",
+      "title": "获取标的概况",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData"
+    },
+    {
+      "page": "JQData",
+      "level": "h3",
+      "title": "获取交易日历",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData"
+    },
+    {
+      "page": "JQData",
+      "level": "h3",
+      "title": "通用行情接口",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData"
+    },
+    {
+      "page": "JQData",
+      "level": "h3",
+      "title": "判断是否ST/基金净值/期货结算价",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData"
+    },
+    {
+      "page": "JQData",
+      "level": "h3",
+      "title": "run_query 查询数据库中的数据",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData"
+    },
+    {
+      "page": "JQData",
+      "level": "h2",
+      "title": "股票",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData"
+    },
+    {
+      "page": "JQData",
+      "level": "h3",
+      "title": "股票概况",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData"
+    },
+    {
+      "page": "JQData",
+      "level": "h3",
+      "title": "股票行情数据",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData"
+    },
+    {
+      "page": "JQData",
+      "level": "h3",
+      "title": "股票融资融券数据",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData"
+    },
+    {
+      "page": "JQData",
+      "level": "h3",
+      "title": "股票：指数成分股及权重数据",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData"
+    },
+    {
+      "page": "JQData",
+      "level": "h3",
+      "title": "股票交易统计数据",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData"
+    },
+    {
+      "page": "JQData",
+      "level": "h3",
+      "title": "市场通数据（含南北向资金数据）",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData"
+    },
+    {
+      "page": "JQData",
+      "level": "h3",
+      "title": "行业分类与概念分类",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData"
+    },
+    {
+      "page": "JQData",
+      "level": "h4",
+      "title": "行业概念分类",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData"
+    },
+    {
+      "page": "JQData",
+      "level": "h4",
+      "title": "申万行业指数数据",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData"
+    },
+    {
+      "page": "JQData",
+      "level": "h2",
+      "title": "财务数据",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData"
+    },
+    {
+      "page": "JQData",
+      "level": "h3",
+      "title": "单季度/年度财务数据",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData"
+    },
+    {
+      "page": "JQData",
+      "level": "h4",
+      "title": "查询方法（含新接口）",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData"
+    },
+    {
+      "page": "JQData",
+      "level": "h4",
+      "title": "财务及估值数据",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData"
+    },
+    {
+      "page": "JQData",
+      "level": "h4",
+      "title": "专项指标（银行业/券商/保险）",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData"
+    },
+    {
+      "page": "JQData",
+      "level": "h3",
+      "title": "报告期财务数据",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData"
+    },
+    {
+      "page": "JQData",
+      "level": "h4",
+      "title": "通用财务报表",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData"
+    },
+    {
+      "page": "JQData",
+      "level": "h4",
+      "title": "金融类财务报表",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData"
+    },
+    {
+      "page": "JQData",
+      "level": "h4",
+      "title": "业绩预告",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData"
+    },
+    {
+      "page": "JQData",
+      "level": "h2",
+      "title": "上市公司基础信息",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData"
+    },
+    {
+      "page": "JQData",
+      "level": "h3",
+      "title": "上市公司相关信息",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData"
+    },
+    {
+      "page": "JQData",
+      "level": "h4",
+      "title": "上市公司概况",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData"
+    },
+    {
+      "page": "JQData",
+      "level": "h4",
+      "title": "上市公司股东和股本信息",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData"
+    },
+    {
+      "page": "JQData",
+      "level": "h2",
+      "title": "期货",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData"
+    },
+    {
+      "page": "JQData",
+      "level": "h3",
+      "title": "期货概况（含新接口）",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData"
+    },
+    {
+      "page": "JQData",
+      "level": "h3",
+      "title": "期货行情数据",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData"
+    },
+    {
+      "page": "JQData",
+      "level": "h3",
+      "title": "期货交易统计数据",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData"
+    },
+    {
+      "page": "JQData",
+      "level": "h2",
+      "title": "基金",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData"
+    },
+    {
+      "page": "JQData",
+      "level": "h3",
+      "title": "基金概况",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData"
+    },
+    {
+      "page": "JQData",
+      "level": "h3",
+      "title": "场内基金行情数据",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData"
+    },
+    {
+      "page": "JQData",
+      "level": "h3",
+      "title": "基金融资融券",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData"
+    },
+    {
+      "page": "JQData",
+      "level": "h3",
+      "title": "公募基金数据(净值等)",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData"
+    },
+    {
+      "page": "JQData",
+      "level": "h2",
+      "title": "指数",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData"
+    },
+    {
+      "page": "JQData",
+      "level": "h3",
+      "title": "指数概况",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData"
+    },
+    {
+      "page": "JQData",
+      "level": "h3",
+      "title": "指数行情数据",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData"
+    },
+    {
+      "page": "JQData",
+      "level": "h3",
+      "title": "指数成分股及权重数据",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData"
+    },
+    {
+      "page": "JQData",
+      "level": "h2",
+      "title": "期权",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData"
+    },
+    {
+      "page": "JQData",
+      "level": "h3",
+      "title": "期权概况",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData"
+    },
+    {
+      "page": "JQData",
+      "level": "h3",
+      "title": "期权行情数据",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData"
+    },
+    {
+      "page": "JQData",
+      "level": "h3",
+      "title": "期权交易统计数据",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData"
+    },
+    {
+      "page": "JQData",
+      "level": "h3",
+      "title": "期权列表",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData"
+    },
+    {
+      "page": "JQData",
+      "level": "h2",
+      "title": "债券",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData"
+    },
+    {
+      "page": "JQData",
+      "level": "h3",
+      "title": "债券概况",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData"
+    },
+    {
+      "page": "JQData",
+      "level": "h3",
+      "title": "国债逆回购日行情",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData"
+    },
+    {
+      "page": "JQData",
+      "level": "h3",
+      "title": "可转债概况",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData"
+    },
+    {
+      "page": "JQData",
+      "level": "h3",
+      "title": "可转债统计数据",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData"
+    },
+    {
+      "page": "JQData",
+      "level": "h3",
+      "title": "可转债行情数据",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData"
+    },
+    {
+      "page": "JQData",
+      "level": "h2",
+      "title": "宏观数据",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData"
+    },
+    {
+      "page": "JQData",
+      "level": "h2",
+      "title": "新闻联播文本",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData"
+    },
+    {
+      "page": "JQData",
+      "level": "h2",
+      "title": "tick数据(机构)",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData"
+    },
+    {
+      "page": "JQData",
+      "level": "h2",
+      "title": "因子数据（含新接口）",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData"
+    },
+    {
+      "page": "JQData",
+      "level": "h3",
+      "title": "聚宽因子库",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData"
+    },
+    {
+      "page": "JQData",
+      "level": "h3",
+      "title": "ALPHA特色因子",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData"
+    },
+    {
+      "page": "JQData",
+      "level": "h3",
+      "title": "技术分析指标",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData"
+    },
+    {
+      "page": "JQData",
+      "level": "h3",
+      "title": "因子看板及风格因子等（新）",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData"
+    },
+    {
+      "page": "JQData",
+      "level": "h4",
+      "title": "因子看板数据",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData"
+    },
+    {
+      "page": "JQData",
+      "level": "h4",
+      "title": "风格因子归因",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData"
+    },
+    {
+      "page": "JQData",
+      "level": "h2",
+      "title": "活动专区",
+      "source": "https://www.joinquant.com/help/api/help?name=JQData"
+    },
+    {
+      "page": "optimizer",
+      "level": "h2",
+      "title": "投资组合优化",
+      "source": "https://www.joinquant.com/help/api/help?name=optimizer"
+    },
+    {
+      "page": "optimizer",
+      "level": "h3",
+      "title": "概述",
+      "source": "https://www.joinquant.com/help/api/help?name=optimizer"
+    },
+    {
+      "page": "optimizer",
+      "level": "h4",
+      "title": "示例",
+      "source": "https://www.joinquant.com/help/api/help?name=optimizer"
+    },
+    {
+      "page": "optimizer",
+      "level": "h3",
+      "title": "portfolio_optimizer - 投资组合优化",
+      "source": "https://www.joinquant.com/help/api/help?name=optimizer"
+    },
+    {
+      "page": "optimizer",
+      "level": "h2",
+      "title": "概述",
+      "source": "https://www.joinquant.com/help/api/help?name=optimizer"
+    },
+    {
+      "page": "optimizer",
+      "level": "h4",
+      "title": "示例",
+      "source": "https://www.joinquant.com/help/api/help?name=optimizer"
+    },
+    {
+      "page": "optimizer",
+      "level": "h2",
+      "title": "优化",
+      "source": "https://www.joinquant.com/help/api/help?name=optimizer"
+    },
+    {
+      "page": "optimizer",
+      "level": "h4",
+      "title": "相关参数",
+      "source": "https://www.joinquant.com/help/api/help?name=optimizer"
+    },
+    {
+      "page": "faq",
+      "level": "h2",
+      "title": "常见问题",
+      "source": "https://www.joinquant.com/help/api/help?name=faq"
+    },
+    {
+      "page": "faq",
+      "level": "h3",
+      "title": "关于JoinQuant",
+      "source": "https://www.joinquant.com/help/api/help?name=faq"
+    },
+    {
+      "page": "faq",
+      "level": "h3",
+      "title": "数据",
+      "source": "https://www.joinquant.com/help/api/help?name=faq"
+    },
+    {
+      "page": "faq",
+      "level": "h4",
+      "title": "JoinQuant提供哪些数据及数据更新频率",
+      "source": "https://www.joinquant.com/help/api/help?name=faq"
+    },
+    {
+      "page": "faq",
+      "level": "h4",
+      "title": "JoinQuant提供的数据支持下载吗？",
+      "source": "https://www.joinquant.com/help/api/help?name=faq"
+    },
+    {
+      "page": "faq",
+      "level": "h4",
+      "title": "数据后缀是怎么定义的？",
+      "source": "https://www.joinquant.com/help/api/help?name=faq"
+    },
+    {
+      "page": "faq",
+      "level": "h4",
+      "title": "发现数据有问题怎么办？",
+      "source": "https://www.joinquant.com/help/api/help?name=faq"
+    },
+    {
+      "page": "faq",
+      "level": "h4",
+      "title": "不同平台的行情数据或者财务数据不同",
+      "source": "https://www.joinquant.com/help/api/help?name=faq"
+    },
+    {
+      "page": "faq",
+      "level": "h4",
+      "title": "JQData，jqdatasdk和jqdata的关系",
+      "source": "https://www.joinquant.com/help/api/help?name=faq"
+    },
+    {
+      "page": "faq",
+      "level": "h4",
+      "title": "如何获取行业及概念板块的行情数据及pe,pb等数据",
+      "source": "https://www.joinquant.com/help/api/help?name=faq"
+    },
+    {
+      "page": "faq",
+      "level": "h4",
+      "title": "有关期货主力合约或者指数与其他平台问题",
+      "source": "https://www.joinquant.com/help/api/help?name=faq"
+    },
+    {
+      "page": "faq",
+      "level": "h3",
+      "title": "为什么有时看到的期货主力合约和其他平台不一致，是怎么判断的，什么时候更新的",
+      "source": "https://www.joinquant.com/help/api/help?name=faq"
+    },
+    {
+      "page": "faq",
+      "level": "h4",
+      "title": "JQData使用过程过程有问题怎么处理？",
+      "source": "https://www.joinquant.com/help/api/help?name=faq"
+    },
+    {
+      "page": "faq",
+      "level": "h3",
+      "title": "回测",
+      "source": "https://www.joinquant.com/help/api/help?name=faq"
+    },
+    {
+      "page": "faq",
+      "level": "h4",
+      "title": "回测的作用？",
+      "source": "https://www.joinquant.com/help/api/help?name=faq"
+    },
+    {
+      "page": "faq",
+      "level": "h4",
+      "title": "回测可以使用哪些数据？",
+      "source": "https://www.joinquant.com/help/api/help?name=faq"
+    },
+    {
+      "page": "faq",
+      "level": "h4",
+      "title": "如何创建并运行策略？",
+      "source": "https://www.joinquant.com/help/api/help?name=faq"
+    },
+    {
+      "page": "faq",
+      "level": "h4",
+      "title": "如何编写一个最简单的策略？",
+      "source": "https://www.joinquant.com/help/api/help?name=faq"
+    },
+    {
+      "page": "faq",
+      "level": "h4",
+      "title": "编译运行和运行回测的区别？",
+      "source": "https://www.joinquant.com/help/api/help?name=faq"
+    },
+    {
+      "page": "faq",
+      "level": "h4",
+      "title": "回测时Cash（可用资金）为负是因为什么？",
+      "source": "https://www.joinquant.com/help/api/help?name=faq"
+    },
+    {
+      "page": "faq",
+      "level": "h4",
+      "title": "多次回测的结果不一样， 可能是什么原因？",
+      "source": "https://www.joinquant.com/help/api/help?name=faq"
+    },
+    {
+      "page": "faq",
+      "level": "h4",
+      "title": "参数优化及并行回测",
+      "source": "https://www.joinquant.com/help/api/help?name=faq"
+    },
+    {
+      "page": "faq",
+      "level": "h4",
+      "title": "参数优化及并行回测参考教程",
+      "source": "https://www.joinquant.com/help/api/help?name=faq"
+    },
+    {
+      "page": "faq",
+      "level": "h4",
+      "title": "区分create_backtest(策略ID)和get_backtest(回测ID)",
+      "source": "https://www.joinquant.com/help/api/help?name=faq"
+    },
+    {
+      "page": "faq",
+      "level": "h4",
+      "title": "回测运行比较慢",
+      "source": "https://www.joinquant.com/help/api/help?name=faq"
+    },
+    {
+      "page": "faq",
+      "level": "h3",
+      "title": "模拟交易",
+      "source": "https://www.joinquant.com/help/api/help?name=faq"
+    },
+    {
+      "page": "faq",
+      "level": "h4",
+      "title": "模拟交易运行时间",
+      "source": "https://www.joinquant.com/help/api/help?name=faq"
+    },
+    {
+      "page": "faq",
+      "level": "h4",
+      "title": "模拟交易使用什么数据？",
+      "source": "https://www.joinquant.com/help/api/help?name=faq"
+    },
+    {
+      "page": "faq",
+      "level": "h4",
+      "title": "如何进行模拟交易？",
+      "source": "https://www.joinquant.com/help/api/help?name=faq"
+    },
+    {
+      "page": "faq",
+      "level": "h4",
+      "title": "如果提示没有可用的模拟交易位，请点击 模拟交易列表 最下面的 获取新的模拟交易位 ，使用积分兑换模拟交易位；请注意模拟交易位是和频率有关的，需要选择对应运行频率的模拟交易位。",
+      "source": "https://www.joinquant.com/help/api/help?name=faq"
+    },
+    {
+      "page": "faq",
+      "level": "h4",
+      "title": "模拟交易支持哪些操作？",
+      "source": "https://www.joinquant.com/help/api/help?name=faq"
+    },
+    {
+      "page": "faq",
+      "level": "h4",
+      "title": "如何替换模拟交易的代码？",
+      "source": "https://www.joinquant.com/help/api/help?name=faq"
+    },
+    {
+      "page": "faq",
+      "level": "h4",
+      "title": "如何重新设置日志级别（替换代码）",
+      "source": "https://www.joinquant.com/help/api/help?name=faq"
+    },
+    {
+      "page": "faq",
+      "level": "h4",
+      "title": "如何开启微信通知？",
+      "source": "https://www.joinquant.com/help/api/help?name=faq"
+    },
+    {
+      "page": "faq",
+      "level": "h4",
+      "title": "数据有延迟？",
+      "source": "https://www.joinquant.com/help/api/help?name=faq"
+    },
+    {
+      "page": "faq",
+      "level": "h4",
+      "title": "日志提示：策略进程异常退出，可能是什么原因？",
+      "source": "https://www.joinquant.com/help/api/help?name=faq"
+    },
+    {
+      "page": "faq",
+      "level": "h4",
+      "title": "模拟交易或者回测怎么读取本地文件或者保存文件到研究",
+      "source": "https://www.joinquant.com/help/api/help?name=faq"
+    },
+    {
+      "page": "faq",
+      "level": "h4",
+      "title": "模拟交易没有运行？",
+      "source": "https://www.joinquant.com/help/api/help?name=faq"
+    },
+    {
+      "page": "faq",
+      "level": "h4",
+      "title": "模拟交易界面上参数说明",
+      "source": "https://www.joinquant.com/help/api/help?name=faq"
+    },
+    {
+      "page": "faq",
+      "level": "h4",
+      "title": "模拟交易运行时间",
+      "source": "https://www.joinquant.com/help/api/help?name=faq"
+    },
+    {
+      "page": "faq",
+      "level": "h4",
+      "title": "延时运行",
+      "source": "https://www.joinquant.com/help/api/help?name=faq"
+    },
+    {
+      "page": "faq",
+      "level": "h3",
+      "title": "投资研究",
+      "source": "https://www.joinquant.com/help/api/help?name=faq"
+    },
+    {
+      "page": "faq",
+      "level": "h4",
+      "title": "研究的说明",
+      "source": "https://www.joinquant.com/help/api/help?name=faq"
+    },
+    {
+      "page": "faq",
+      "level": "h4",
+      "title": "研究的作用",
+      "source": "https://www.joinquant.com/help/api/help?name=faq"
+    },
+    {
+      "page": "faq",
+      "level": "h4",
+      "title": "研究内核的选择",
+      "source": "https://www.joinquant.com/help/api/help?name=faq"
+    },
+    {
+      "page": "faq",
+      "level": "h4",
+      "title": "研究内存、磁盘等不够用怎么办？",
+      "source": "https://www.joinquant.com/help/api/help?name=faq"
+    },
+    {
+      "page": "faq",
+      "level": "h4",
+      "title": "上传文件和下载文件是否有限制？",
+      "source": "https://www.joinquant.com/help/api/help?name=faq"
+    },
+    {
+      "page": "faq",
+      "level": "h4",
+      "title": "研究和回测中都支持哪些第三方Python库",
+      "source": "https://www.joinquant.com/help/api/help?name=faq"
+    },
+    {
+      "page": "faq",
+      "level": "h4",
+      "title": "投资研究使用教程",
+      "source": "https://www.joinquant.com/help/api/help?name=faq"
+    },
+    {
+      "page": "faq",
+      "level": "h4",
+      "title": "回测及模拟交易和研究的数据如何交互",
+      "source": "https://www.joinquant.com/help/api/help?name=faq"
+    },
+    {
+      "page": "faq",
+      "level": "h4",
+      "title": "投资研究打不开的解决方法",
+      "source": "https://www.joinquant.com/help/api/help?name=faq"
+    },
+    {
+      "page": "faq",
+      "level": "h4",
+      "title": "查看研究文件大小及数量",
+      "source": "https://www.joinquant.com/help/api/help?name=faq"
+    },
+    {
+      "page": "faq",
+      "level": "h3",
+      "title": "其他第三方库问题",
+      "source": "https://www.joinquant.com/help/api/help?name=faq"
+    },
+    {
+      "page": "faq",
+      "level": "h4",
+      "title": "研究和回测中都支持哪些第三方Python库",
+      "source": "https://www.joinquant.com/help/api/help?name=faq"
+    },
+    {
+      "page": "faq",
+      "level": "h4",
+      "title": "Pandas常见问题",
+      "source": "https://www.joinquant.com/help/api/help?name=faq"
+    },
+    {
+      "page": "faq",
+      "level": "h3",
+      "title": "Pandas: 如何增加 DataFrame 显示的行、列数？",
+      "source": "https://www.joinquant.com/help/api/help?name=faq"
+    },
+    {
+      "page": "faq",
+      "level": "h3",
+      "title": "Pandas: object has no attribute sort_values",
+      "source": "https://www.joinquant.com/help/api/help?name=faq"
+    },
+    {
+      "page": "faq",
+      "level": "h4",
+      "title": "numpy.float64 浮点数的展示问题",
+      "source": "https://www.joinquant.com/help/api/help?name=faq"
+    },
+    {
+      "page": "faq",
+      "level": "h4",
+      "title": "忽略或屏蔽提示及警告",
+      "source": "https://www.joinquant.com/help/api/help?name=faq"
+    },
+    {
+      "page": "faq",
+      "level": "h4",
+      "title": "matplotlib中文显示",
+      "source": "https://www.joinquant.com/help/api/help?name=faq"
+    },
+    {
+      "page": "faq",
+      "level": "h4",
+      "title": "mpl_finance",
+      "source": "https://www.joinquant.com/help/api/help?name=faq"
+    },
+    {
+      "page": "faq",
+      "level": "h4",
+      "title": "已知的第三方库中的bug",
+      "source": "https://www.joinquant.com/help/api/help?name=faq"
+    },
+    {
+      "page": "faq",
+      "level": "h4",
+      "title": "研究中安装第三方库",
+      "source": "https://www.joinquant.com/help/api/help?name=faq"
+    },
+    {
+      "page": "faq",
+      "level": "h3",
+      "title": "聚宽VIP说明",
+      "source": "https://www.joinquant.com/help/api/help?name=faq"
+    },
+    {
+      "page": "faq",
+      "level": "h4",
+      "title": "客户服务",
+      "source": "https://www.joinquant.com/help/api/help?name=faq"
+    },
+    {
+      "page": "faq",
+      "level": "h4",
+      "title": "平台资源",
+      "source": "https://www.joinquant.com/help/api/help?name=faq"
+    },
+    {
+      "page": "faq",
+      "level": "h4",
+      "title": "积分优惠",
+      "source": "https://www.joinquant.com/help/api/help?name=faq"
+    },
+    {
+      "page": "faq",
+      "level": "h4",
+      "title": "高级功能",
+      "source": "https://www.joinquant.com/help/api/help?name=faq"
+    },
+    {
+      "page": "faq",
+      "level": "h4",
+      "title": "更多专属功能即将上线",
+      "source": "https://www.joinquant.com/help/api/help?name=faq"
+    },
+    {
+      "page": "faq",
+      "level": "h4",
+      "title": "VIP会员更多问题",
+      "source": "https://www.joinquant.com/help/api/help?name=faq"
+    },
+    {
+      "page": "faq",
+      "level": "h3",
+      "title": "实盘说明",
+      "source": "https://www.joinquant.com/help/api/help?name=faq"
+    },
+    {
+      "page": "plateData",
+      "level": "h2",
+      "title": "行业概念数据",
+      "source": "https://www.joinquant.com/help/api/help?name=plateData"
+    },
+    {
+      "page": "plateData",
+      "level": "h2",
+      "title": "行业类",
+      "source": "https://www.joinquant.com/help/api/help?name=plateData"
+    },
+    {
+      "page": "plateData",
+      "level": "h3",
+      "title": "证监会行业",
+      "source": "https://www.joinquant.com/help/api/help?name=plateData"
+    },
+    {
+      "page": "plateData",
+      "level": "h3",
+      "title": "聚宽行业",
+      "source": "https://www.joinquant.com/help/api/help?name=plateData"
+    },
+    {
+      "page": "plateData",
+      "level": "h4",
+      "title": "聚宽一级行业",
+      "source": "https://www.joinquant.com/help/api/help?name=plateData"
+    },
+    {
+      "page": "plateData",
+      "level": "h4",
+      "title": "聚宽二级行业",
+      "source": "https://www.joinquant.com/help/api/help?name=plateData"
+    },
+    {
+      "page": "plateData",
+      "level": "h3",
+      "title": "申万行业",
+      "source": "https://www.joinquant.com/help/api/help?name=plateData"
+    },
+    {
+      "page": "plateData",
+      "level": "h4",
+      "title": "申万一级行业",
+      "source": "https://www.joinquant.com/help/api/help?name=plateData"
+    },
+    {
+      "page": "plateData",
+      "level": "h4",
+      "title": "申万二级行业",
+      "source": "https://www.joinquant.com/help/api/help?name=plateData"
+    },
+    {
+      "page": "plateData",
+      "level": "h4",
+      "title": "申万三级行业",
+      "source": "https://www.joinquant.com/help/api/help?name=plateData"
+    },
+    {
+      "page": "plateData",
+      "level": "h2",
+      "title": "概念类",
+      "source": "https://www.joinquant.com/help/api/help?name=plateData"
+    },
+    {
+      "page": "plateData",
+      "level": "h3",
+      "title": "概念板块",
+      "source": "https://www.joinquant.com/help/api/help?name=plateData"
+    },
+    {
+      "page": "Option",
+      "level": "h2",
+      "title": "获取期权数据",
+      "source": "https://www.joinquant.com/help/api/help?name=Option"
+    },
+    {
+      "page": "Option",
+      "level": "h3",
+      "title": "获取期权合约资料",
+      "source": "https://www.joinquant.com/help/api/help?name=Option"
+    },
+    {
+      "page": "Option",
+      "level": "h3",
+      "title": "获取期权合约调整记录",
+      "source": "https://www.joinquant.com/help/api/help?name=Option"
+    },
+    {
+      "page": "Option",
+      "level": "h3",
+      "title": "获取期权每日盘前静态文件",
+      "source": "https://www.joinquant.com/help/api/help?name=Option"
+    },
+    {
+      "page": "Option",
+      "level": "h3",
+      "title": "获取期权日行情数据",
+      "source": "https://www.joinquant.com/help/api/help?name=Option"
+    },
+    {
+      "page": "Option",
+      "level": "h3",
+      "title": "获取期权分钟行情(仅本地数据提供)",
+      "source": "https://www.joinquant.com/help/api/help?name=Option"
+    },
+    {
+      "page": "Option",
+      "level": "h3",
+      "title": "获取指定时间周期的期权行情(仅本地数据提供)",
+      "source": "https://www.joinquant.com/help/api/help?name=Option"
+    },
+    {
+      "page": "Option",
+      "level": "h3",
+      "title": "获取期权的tick行情(仅本地数据提供)",
+      "source": "https://www.joinquant.com/help/api/help?name=Option"
+    },
+    {
+      "page": "Option",
+      "level": "h3",
+      "title": "获取ETF期权交易和持仓排名统计",
+      "source": "https://www.joinquant.com/help/api/help?name=Option"
+    },
+    {
+      "page": "Option",
+      "level": "h3",
+      "title": "获取期权风险指标数据",
+      "source": "https://www.joinquant.com/help/api/help?name=Option"
+    },
+    {
+      "page": "Option",
+      "level": "h3",
+      "title": "获取期权行权交收信息",
+      "source": "https://www.joinquant.com/help/api/help?name=Option"
+    },
+    {
+      "page": "Option",
+      "level": "h2",
+      "title": "期权列表",
+      "source": "https://www.joinquant.com/help/api/help?name=Option"
+    }
+  ]
+}
